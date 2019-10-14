@@ -1,0 +1,65 @@
+
+.box {
+	background: #09bb07;
+	color: #ffffff;
+	width: 80%;
+	margin: auto;
+	height: 80rpx;
+	font-size: 32rpx;
+	border-radius: 30rpx;
+	border: 1px solid #eeeeee;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+.box1 {
+	width: 100%;
+	height: 500rpx;
+	background: #007aff;
+	color: #ffffff;
+	font-size: 40rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.box2 {
+	width: 300rpx;
+	height: 300rpx;
+	background: #09bb07;
+	color: #ffffff;
+	font-size: 40rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.font {
+	font-size: 50rpx;
+}
+

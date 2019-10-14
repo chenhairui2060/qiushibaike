@@ -42,7 +42,11 @@
 			}
 		}, {
 			"path": "pages/news/news",
-			"style": {}
+			"style": {
+				"app-plus":{
+					"titleNView":false//是否用自定义导航栏
+				}
+			}
 		}, {
 			"path": "pages/paper/paper",
 			"style": {}
@@ -96,6 +100,7 @@
 				}
 			}
         }
+     
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

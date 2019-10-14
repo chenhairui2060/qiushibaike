@@ -1,25 +1,12 @@
 
-.uni-textarea.data-v-02b67519{
-	border: 1rpx solid #EEEEEE;
+.uni-textarea.data-v-02b67519 {
+	border: 1rpx solid #eeeeee;
 }
 .cell-pd.data-v-02b67519 {
-		padding: 22rpx 30rpx;
+	padding: 22rpx 30rpx;
 }
 .list-pd.data-v-02b67519 {
-		margin-top: 50rpx;
+	margin-top: 50rpx;
 }
-.uni-uploader__file.data-v-02b67519{
-		position: relative;
-}
-.icon-shanchu.data-v-02b67519{
-		position: absolute;
-		right: 0;
-		top: 0;
-		background: #333;
-		color: #FFFFFF;
-		padding: 2px 10rpx;
-		border-radius: 10rpx;
-		z-index: 999;
-		font-size: 22rpx;
-}
+
 

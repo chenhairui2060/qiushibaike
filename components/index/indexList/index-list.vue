@@ -5,7 +5,7 @@
 				<image :src="item.userpic" mode="widthFix" lazy-load></image>
 				{{ item.username }}
 			</view>
-			<view class="u-f-ac" v-show="!item.isguanzhu" @tap="isguanzhu">
+			<view class="u-f-ac" v-show="!isguanzhu" @tap="guanzhu">
 				<view class="icon iconfont icon-zengjia"></view>
 				关注
 			</view>
@@ -23,13 +23,13 @@
 
 		<view class="index-list4 u-f-ac u-f-jsb">
 			<view class="u-f-ac">
-				<view class="u-f-ac" :class="{ active: item.infonum.index == 1 }" @click="caozuo('ding')">
+				<view class="u-f-ac" :class="{ active:infonum.index == 1 }" @click="caozuo('ding')">
 					<view class="icon iconfont icon-icon_xiaolian-mian"></view>
-					<view>{{ item.infonum.dingnum }}</view>
+					<view>{{infonum.dingnum }}</view>
 				</view>
-				<view class="u-f-ac" :class="{ active: item.infonum.index == 2 }" @click="caozuo('cai')">
+				<view class="u-f-ac" :class="{ active: infonum.index == 2 }" @click="caozuo('cai')">
 					<view class="icon iconfont icon-kulian"></view>
-					<view>{{ item.infonum.cainum }}</view>
+					<view>{{infonum.cainum }}</view>
 				</view>
 			</view>
 			<view class="u-f-ac">
@@ -53,40 +53,42 @@ export default {
 	},
 	data() {
 		return {
-			infonum:this.item.infonum
+			infonum:this.item.infonum,
+			isguanzhu:this.item.isguanzhu
 		};
 	},
 	onLoad() {},
 	methods: {
-		isguanzhu() {
-			this.item.isguanzhu = true;
+		guanzhu() {
+			this.isguanzhu = true;
 			uni.showToast({
 				title: '关注成功！'
 			});
 		},
 		//操作
 		caozuo(type) {
-			console.log('点击了');
+			// console.log('点击了');
+			//不能直接修改父组件传过来的值
 			switch (type) {
 				case 'ding':
-					if (this.item.infonum.index == 1) {
+					if (this.infonum.index == 1) {
 						return;
 					}
-					this.item.infonum.dingnum++;
-					if (this.item.infonum.index == 2) {
-						this.item.infonum.cainum--;
+					this.infonum.dingnum++;
+					if (this.infonum.index == 2) {
+						this.infonum.cainum--;
 					}
-					this.item.infonum.index = 1;
+					this.infonum.index = 1;
 					break;
 				case 'cai':
-					if (this.item.infonum.index == 2) {
+					if (this.infonum.index == 2) {
 						return;
 					}
-					this.item.infonum.cainum++;
-					if (this.item.infonum.index == 1) {
-						this.item.infonum.dingnum--;
+					this.infonum.cainum++;
+					if (this.infonum.index == 1) {
+						this.infonum.dingnum--;
 					}
-					this.item.infonum.index = 2;
+					this.infonum.index = 2;
 					break;
 			}
 		},

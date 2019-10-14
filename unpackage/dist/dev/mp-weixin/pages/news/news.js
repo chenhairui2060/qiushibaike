@@ -200,7 +200,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
         username: '曲调',
         sex: 0, //0 男 1 女
         age: 25,
-        isguanzu: false,
+        isguanzhu: false,
         title: '我的标题',
         titlepic: '/static/demo/datapic/15.jpg',
         video: false,
@@ -216,7 +216,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
         username: '曲调',
         sex: 0, //0 男 1 女
         age: 25,
-        isguanzu: false,
+        isguanzhu: false,
         title: '我的标题',
         titlepic: '/static/demo/datapic/15.jpg',
         video: {
@@ -235,7 +235,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
         username: '曲调',
         sex: 1, //0 男 1 女
         age: 25,
-        isguanzu: false,
+        isguanzhu: false,
         title: '我的标题',
         video: false,
         share: {

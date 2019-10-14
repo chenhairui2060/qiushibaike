@@ -1,5 +1,5 @@
 <template>
-	<view class="common-list u-f">
+	<view class="common-list u-f animated fadeInLeft fast">
 		<view class="common-list-lt"><image :src="item.userpic" mode="widthFix" lazy-load></image></view>
 		<view class="common-list-rt">
 			<view class="u-f-ac u-f-jsb">
@@ -9,7 +9,7 @@
 					:class="[item.sex==0?'icon-nan':'icon-nv']"
 					class="tag-sex icon iconfont ">{{item.age}}</view>
 				</view>
-				<view class="icon iconfont icon-zengjia" v-show="!item.isguanzu">关注</view>
+				<view class="icon iconfont icon-zengjia" v-show="!isguanzhu" @tap="gaunzhu">关注</view>
 			</view>
 			<view>
 				{{item.title}}
@@ -50,11 +50,18 @@ export default {
 		index:Number
 	},
 	data() {
-		return {};
+		return {
+			isguanzhu:this.item.isguanzhu
+		};
 	},
 	onLoad() {},
 	methods: {
-		
+		gaunzhu(){
+			this.isguanzhu=true;
+			uni.showToast({
+				title:"关注成功！"
+			})
+		}
 	}
 };
 </script>

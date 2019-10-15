@@ -7,7 +7,7 @@
 					{{item.username}}
 					<view 
 					:class="[item.sex==0?'icon-nan':'icon-nv']"
-					class="tag-sex icon iconfont ">{{item.age}}</view>
+					class="icon iconfont ">{{item.age}}</view>
 				</view>
 				<view class="icon iconfont icon-zengjia" v-show="!isguanzhu" @tap="gaunzhu">关注</view>
 			</view>

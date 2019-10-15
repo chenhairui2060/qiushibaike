@@ -28,8 +28,17 @@
 	padding: 0 8rpx;
 	font-size: 26rpx;
 }
-.tag-sex.data-v-04ec5de2 {
+.icon-nan.data-v-04ec5de2{
 	background: #007aff;
+	color: #ffffff;
+	font-size: 23rpx;
+	padding: 5rpx 10rpx;
+	margin-left: 10rpx;
+	border-radius: 20rpx;
+	line-height: 22rpx;
+}
+.icon-nv.data-v-04ec5de2{
+	background: #FF3333;
 	color: #ffffff;
 	font-size: 23rpx;
 	padding: 5rpx 10rpx;
@@ -43,6 +52,7 @@
 }
 .common-list-rt > view.data-v-04ec5de2:nth-child(3) {
 	position: relative;
+	margin-bottom: 10rpx;
 }
 .common-list-play.data-v-04ec5de2,
 .common-list-playInfo.data-v-04ec5de2 {
@@ -66,6 +76,7 @@
 .common-list-rt > view:nth-child(4) > view:nth-child(2) > view.data-v-04ec5de2 {
 	margin-left: 10rpx;
 	padding-left: 5rpx;
+	font-size: 28rpx;
 }
 .common-list-share.data-v-04ec5de2{
 	background: #EEEEEE;

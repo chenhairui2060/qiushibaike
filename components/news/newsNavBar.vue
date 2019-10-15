@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<uni-nav-bar :fixed="true" :statusBar="true" @click-right="navAdd" @click-left="back" class="u-f-ajc">
+		<uni-nav-bar :fixed="true" :statusBar="true" :border="false" @click-right="navAdd" @click-left="back" class="u-f-ajc">
 			<!-- 左边 -->
 			<block slot="left">
 				<view class="nav-left"><view class="icon iconfont icon-qiandao"></view></view>
@@ -9,9 +9,9 @@
 			<block>
 				<view class="nav-tab-bar u-f-ajc">
 					<block v-for="(tab, index) in tabBars" :key="tab.id">
-						<view class="u-f-ajc" :class="{ active: tabIdx == index }" @tap="changeTab(index)">
+						<view class="u-f-ajc" :class="{ active: tabIndex == index }" @tap="changeTab(index)">
 							{{ tab.name }}
-							<view v-if="tabIdx == index" class="nav-tab-bar-line"></view>
+							<view v-if="tabIndex == index" class="nav-tab-bar-line"></view>
 						</view>
 					</block>
 				</view>
@@ -32,7 +32,7 @@ export default {
 	},
 	name:'newsNavBar',
 	props:{
-		tabIdx:Number,
+		tabIndex:Number,
 		tabBars:Array
 	},
 	data() {
@@ -40,7 +40,9 @@ export default {
 			
 		};
 	},
-	onLoad() {},
+	onLoad() {
+		
+	},
 	methods: {
 		changeTab(index) {
 			// this.tabIdx = index;
@@ -50,7 +52,8 @@ export default {
 			uni.navigateTo({
 				url:"../../pages/addInput/addInput"
 			})
-		}
+		},
+		
 	}
 };
 </script>

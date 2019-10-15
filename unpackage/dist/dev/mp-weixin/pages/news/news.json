@@ -2,6 +2,7 @@
   "usingComponents": {
     "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar",
     "common-list": "/components/common/commonList",
-    "news-nav-bar": "/components/news/newsNavBar"
+    "news-nav-bar": "/components/news/newsNavBar",
+    "no-thing": "/components/common/noThing"
   }
 }

@@ -139,7 +139,7 @@ __webpack_require__.r(__webpack_exports__);
 
   name: 'newsNavBar',
   props: {
-    tabIdx: Number,
+    tabIndex: Number,
     tabBars: Array },
 
   data: function data() {
@@ -147,7 +147,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
   },
-  onLoad: function onLoad() {},
+  onLoad: function onLoad() {
+
+  },
   methods: {
     changeTab: function changeTab(index) {
       // this.tabIdx = index;

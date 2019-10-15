@@ -120,7 +120,23 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var uniNavBar = function uniNavBar() {return __webpack_require__.e(/*! import() | components/uni-nav-bar/uni-nav-bar */ "components/uni-nav-bar/uni-nav-bar").then(__webpack_require__.bind(null, /*! ../../components/uni-nav-bar/uni-nav-bar.vue */ 91));};var commonList = function commonList() {return __webpack_require__.e(/*! import() | components/common/commonList */ "components/common/commonList").then(__webpack_require__.bind(null, /*! ../../components/common/commonList.vue */ 145));};var newsNavBar = function newsNavBar() {return __webpack_require__.e(/*! import() | components/news/newsNavBar */ "components/news/newsNavBar").then(__webpack_require__.bind(null, /*! ../../components/news/newsNavBar.vue */ 142));};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var uniNavBar = function uniNavBar() {return __webpack_require__.e(/*! import() | components/uni-nav-bar/uni-nav-bar */ "components/uni-nav-bar/uni-nav-bar").then(__webpack_require__.bind(null, /*! ../../components/uni-nav-bar/uni-nav-bar.vue */ 91));};var commonList = function commonList() {return __webpack_require__.e(/*! import() | components/common/commonList */ "components/common/commonList").then(__webpack_require__.bind(null, /*! ../../components/common/commonList.vue */ 145));};var newsNavBar = function newsNavBar() {return __webpack_require__.e(/*! import() | components/news/newsNavBar */ "components/news/newsNavBar").then(__webpack_require__.bind(null, /*! ../../components/news/newsNavBar.vue */ 142));};var noThing = function noThing() {return __webpack_require__.e(/*! import() | components/common/noThing */ "components/common/noThing").then(__webpack_require__.bind(null, /*! ../../components/common/noThing.vue */ 84));};var _default =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -140,11 +156,13 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   components: {
     uniNavBar: uniNavBar,
     commonList: commonList,
-    newsNavBar: newsNavBar },
+    newsNavBar: newsNavBar,
+    noThing: noThing },
 
   data: function data() {
     return {
-      tabIdx: 0,
+      tabIndex: 0,
+      swiperheight: '',
       tabBars: [{ name: '关注', id: 'guanzhu' }, { name: '话题', id: 'huati' }],
       list: [
       {
@@ -173,7 +191,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
         title: '我的标题',
         titlepic: '/static/demo/datapic/15.jpg',
         video: {
-          looknum: "20w",
+          looknum: '20w',
           long: '2:47' },
 
         share: false,
@@ -198,16 +216,31 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
         path: '深圳 龙岗',
         sharenum: 20,
         commentnum: 30,
-        goodnum: 20 }] };
+        goodnum: 20 }],
 
 
+      htlist: [] };
+
+  },
+  onLoad: function onLoad() {
+    var that = this;
+    uni.getSystemInfo({
+      success: function success(res) {
+        var height = res.windowHeight - uni.upx2px(100);
+        that.swiperheight = height;
+        console.log(height);
+      } });
 
   },
   methods: {
     changeTab: function changeTab(index) {
       // console.log(index)
-      this.tabIdx = index;
+      this.tabIndex = index;
+    },
+    tabChange: function tabChange(e) {
+      this.tabIndex = e.detail.current;
     } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ })
 

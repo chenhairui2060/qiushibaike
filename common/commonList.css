@@ -25,8 +25,17 @@
 	padding: 0 8upx;
 	font-size: 26upx;
 }
-.tag-sex {
+.icon-nan{
 	background: #007aff;
+	color: #ffffff;
+	font-size: 23upx;
+	padding: 5upx 10upx;
+	margin-left: 10upx;
+	border-radius: 20upx;
+	line-height: 22upx;
+}
+.icon-nv{
+	background: #FF3333;
 	color: #ffffff;
 	font-size: 23upx;
 	padding: 5upx 10upx;
@@ -40,6 +49,7 @@
 }
 .common-list-rt > view:nth-child(3) {
 	position: relative;
+	margin-bottom: 10upx;
 }
 .common-list-play,
 .common-list-playInfo {
@@ -63,6 +73,7 @@
 .common-list-rt > view:nth-child(4) > view:nth-child(2) > view {
 	margin-left: 10upx;
 	padding-left: 5upx;
+	font-size: 28upx;
 }
 .common-list-share{
 	background: #EEEEEE;

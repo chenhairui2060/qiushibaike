@@ -101,6 +101,12 @@
 			}
         }
      
+        ,{
+            "path" : "pages/topicNav/topicNav",
+            "style" : {
+				"navigationBarTitleText":"热门分类"
+			}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

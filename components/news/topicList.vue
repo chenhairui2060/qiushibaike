@@ -1,5 +1,5 @@
 <template>
-	<view class="u-f-ac p-2">
+	<view class="u-f-ac p-2" @tap="open">
 		<image style="height: 150rpx;width: 150rpx;" class="rounded mr-2" :src="item.cover" mode=""></image>
 		<view class="u-f flex-1 flex-column">
 			<text>#{{ item.title }}#</text>
@@ -27,7 +27,13 @@ export default {
 	data() {
 		return {};
 	},
-	methods: {}
+	methods: {
+		open(){
+			uni.navigateTo({
+				url:"../../pages/topicDetail/topicDetail?item="+JSON.stringify(this.item)
+			})
+		}
+	}
 };
 </script>
 

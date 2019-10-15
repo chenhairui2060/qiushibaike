@@ -49,7 +49,29 @@
 			}
 		}, {
 			"path": "pages/paper/paper",
-			"style": {}
+			"style": {
+				"navigationBarTitleText":"消息列表",
+				"app-plus":{
+					"titleNView":{
+						"buttons":[{
+							"color":"#333333",
+							"colorPressed":"#FD597C",
+							"float":"left",
+							"fontSize":"20px",
+							"fontSrc":"/static/font/icon.ttf",
+							"text":"\ue60a"
+						},
+						{
+							"color":"#333333",
+							"colorPressed":"#FD597C",
+							"float":"right",
+							"fontSize":"20px",
+							"fontSrc":"/static/font/icon.ttf",
+							"text":"\ue62f"
+						}]
+					}
+				}
+			}
 		}, {
 			"path": "pages/home/home",
 			"style": {}
@@ -105,6 +127,19 @@
             "path" : "pages/topicNav/topicNav",
             "style" : {
 				"navigationBarTitleText":"热门分类"
+			}
+        }
+        ,{
+            "path" : "pages/topicDetail/topicDetail",
+            "style" : {
+				"app-plus":{
+					"titleNView":{
+						"type":"transparent",
+						"buttons":[{
+							"type":"menu"
+						}]
+					}
+				}
 			}
         }
     ],

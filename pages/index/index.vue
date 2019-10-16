@@ -10,7 +10,7 @@
 								<!-- 图文列表 -->
 								<block v-for="(item, idx) in items.list" :key="idx"><index-list :item="item" :index="idx"></index-list></block>
 								<!-- 上拉加载 -->
-								<load-more :loadtext="items.loadtext"></load-more>
+								<view v-if="items.list.length > 10"><load-more :loadtext="items.loadtext"></load-more></view>
 							</template>
 							<template v-else>
 								<!-- 无内容默认 -->
@@ -21,7 +21,6 @@
 				</block>
 			</swiper>
 		</view>
-		
 	</view>
 </template>
 
@@ -135,7 +134,7 @@ export default {
 		let that = this;
 		uni.getSystemInfo({
 			success: function(res) {
-				let height = res.windowHeight - uni.upx2px(100);
+				let height = res.windowHeight - uni.upx2px(101);
 				that.swiperheight = height;
 				console.log(height);
 			}
@@ -151,6 +150,7 @@ export default {
 		},
 		//上拉加载
 		loadmore(index) {
+			console.log('上拉加载');
 			if (this.newsList[index].loadtext != '上拉加载更多') {
 				return;
 			}
@@ -185,13 +185,13 @@ export default {
 		onNavigationBarButtonTap(e) {
 			switch (e.index) {
 				case 0:
-				console.log('进入签到页面')
+					console.log('进入签到页面');
 					break;
 				case 1:
-				console.log('进入发布页面')
-				uni.navigateTo({
-					url:"../addInput/addInput"
-				})
+					console.log('进入发布页面');
+					uni.navigateTo({
+						url: '../addInput/addInput'
+					});
 					break;
 			}
 		}
@@ -204,6 +204,7 @@ export default {
 .page {
 	height: 100%;
 	width: 100%;
+	/* 	overflow: hidden; */
 	/* position: absolute; */
 }
 </style>

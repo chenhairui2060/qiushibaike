@@ -2,7 +2,11 @@
 	<view class="nothing u-f-ajc"><image src="../../static/common/nothing.png" mode="widthFix"></image></view>
 </template>
 
-<script></script>
+<script>
+	export default{
+		name:"noThing"
+	}
+</script>
 
 <style scoped>
 .nothing {

@@ -51,6 +51,7 @@
 			"path": "pages/paper/paper",
 			"style": {
 				"navigationBarTitleText":"消息列表",
+				"enablePullDownRefresh":true,//下拉刷新
 				"app-plus":{
 					"titleNView":{
 						"buttons":[{
@@ -141,6 +142,40 @@
 					}
 				}
 			}
+        }
+        ,{
+            "path" : "pages/userList/userList",
+            "style" : {
+				"app-plus":{
+					//动画效果
+					"animationType":"slide-in-left",
+					"titleNView":{
+						//取消返回按钮
+						"autoBackButton":false,
+						"searchInput":{
+							"align":"left",
+							"backgroundColor":"#f5f4f2",
+							"borderRadius":"4px",
+							"placeholder":"搜索好友",
+							"placeholderColor":"#666666",
+							"disabled":true
+						},
+						"buttons":[
+							{
+								"float":"right",
+								"fontSize":"15px",
+								"color":"#333333",
+								"text":"取消",
+								"colorPressed":"#007AFF"
+							}
+						]
+					}
+				}
+			}
+        }
+        ,{
+            "path" : "pages/userChat/userChat",
+            "style" : {}
         }
     ],
 	"globalStyle": {

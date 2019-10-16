@@ -3,39 +3,39 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"app-plus":{
-					"scrollIndicator":"none",//隐藏滚动条
-					"bounce":"none",//反弹效果
-					"titleNView":{
-						"buttons":[
+				"app-plus": {
+					"scrollIndicator": "none", //隐藏滚动条
+					"bounce": "none", //反弹效果
+					"titleNView": {
+						"buttons": [
 							//左边
 							{
-								"color":"#ff9619",
-								"colorPressed":"#BBBBBB",
-								"float":"left",
-								"fontSize":"22px",
-								"fontSrc":"/static/font/icon.ttf",
-								"text":"\ue609"
+								"color": "#ff9619",
+								"colorPressed": "#BBBBBB",
+								"float": "left",
+								"fontSize": "22px",
+								"fontSrc": "/static/font/icon.ttf",
+								"text": "\ue609"
 							},
 							//右边
 							{
-								"color":"#000000",
-								"colorPressed":"#BBBBBB",
-								"float":"right",
-								"fontSize":"22px",
-								"fontSrc":"/static/font/icon.ttf",
-								"text":"\ue653"
+								"color": "#000000",
+								"colorPressed": "#BBBBBB",
+								"float": "right",
+								"fontSize": "22px",
+								"fontSrc": "/static/font/icon.ttf",
+								"text": "\ue653"
 							}
 						],
 						//搜索框配置
-						"searchInput":{
-							"align":"center",
-							"autoFocus":false,
-							"borderRadius":"4upx",
-							"backgroundColor":"#f7f7f7",
-							"placeholder":"搜索糗事",
-							"placeholderColor":"#ccc",
-							"disabled":true
+						"searchInput": {
+							"align": "center",
+							"autoFocus": false,
+							"borderRadius": "4upx",
+							"backgroundColor": "#f7f7f7",
+							"placeholder": "搜索糗事",
+							"placeholderColor": "#ccc",
+							"disabled": true
 						}
 					}
 				}
@@ -43,139 +43,175 @@
 		}, {
 			"path": "pages/news/news",
 			"style": {
-				"app-plus":{
-					"titleNView":false//是否用自定义导航栏
+				"app-plus": {
+					"titleNView": false //是否用自定义导航栏
 				}
 			}
 		}, {
 			"path": "pages/paper/paper",
 			"style": {
-				"navigationBarTitleText":"消息列表",
-				"enablePullDownRefresh":true,//下拉刷新
-				"app-plus":{
-					"titleNView":{
-						"buttons":[{
-							"color":"#333333",
-							"colorPressed":"#FD597C",
-							"float":"left",
-							"fontSize":"20px",
-							"fontSrc":"/static/font/icon.ttf",
-							"text":"\ue60a"
-						},
-						{
-							"color":"#333333",
-							"colorPressed":"#FD597C",
-							"float":"right",
-							"fontSize":"20px",
-							"fontSrc":"/static/font/icon.ttf",
-							"text":"\ue62f"
-						}]
+				"navigationBarTitleText": "消息列表",
+				"enablePullDownRefresh": true, //下拉刷新
+				"app-plus": {
+					"titleNView": {
+						"buttons": [{
+								"color": "#333333",
+								"colorPressed": "#FD597C",
+								"float": "left",
+								"fontSize": "20px",
+								"fontSrc": "/static/font/icon.ttf",
+								"text": "\ue60a"
+							},
+							{
+								"color": "#333333",
+								"colorPressed": "#FD597C",
+								"float": "right",
+								"fontSize": "20px",
+								"fontSrc": "/static/font/icon.ttf",
+								"text": "\ue62f"
+							}
+						]
 					}
 				}
 			}
 		}, {
 			"path": "pages/home/home",
-			"style": {}
+			"style": {
+				"navigationBarTitleText":"我的",
+				"app-plus":{
+					"scrollIndicator":"none",
+					"bounce":"none",
+					"titleNView":{
+						"buttons":[
+							{
+								"type":"menu"
+							}
+						]
+					}
+				}
+			}
 		},
 		{
 			"path": "pages/demo/demo",
 			"style": {
 				"navigationBarTitleText": "demo"
 			}
-		}
-        ,{
-            "path" : "pages/search/search",
-           "style": {
-           	"app-plus":{
-           		"scrollIndicator":"none",//隐藏滚动条
-           		"bounce":"none",//反弹效果
-           		"titleNView":{
-					"autoBackButton":false,
-           			"buttons":[
-           				{
-           					"color":"#000000",
-           					"colorPressed":"#BBBBBB",
-           					"float":"right",
-           					"fontSize":"16px",
-           					"text":"取消"
-           				}
-           			],
-           			//搜索框配置
-           			"searchInput":{
-           				"align":"left",
-           				"autoFocus":false,
-           				"borderRadius":"4upx",
-           				"backgroundColor":"#f7f7f7",
-           				"placeholder":"搜索糗事",
-           				"placeholderColor":"#ccc",
-           				"disabled":false
-           			}
-           		}
-           	}
-           }
-        }
-        ,{
-            "path" : "pages/addInput/addInput",
-            "style" : {
-				"app-plus":{
-					//禁用原生导航
-					"titleNView":false
+		}, {
+			"path": "pages/search/search",
+			"style": {
+				"app-plus": {
+					"scrollIndicator": "none", //隐藏滚动条
+					"bounce": "none", //反弹效果
+					"titleNView": {
+						"autoBackButton": false,
+						"buttons": [{
+							"color": "#000000",
+							"colorPressed": "#BBBBBB",
+							"float": "right",
+							"fontSize": "16px",
+							"text": "取消"
+						}],
+						//搜索框配置
+						"searchInput": {
+							"align": "left",
+							"autoFocus": false,
+							"borderRadius": "4upx",
+							"backgroundColor": "#f7f7f7",
+							"placeholder": "搜索糗事",
+							"placeholderColor": "#ccc",
+							"disabled": false
+						}
+					}
 				}
 			}
-        }
-     
-        ,{
-            "path" : "pages/topicNav/topicNav",
-            "style" : {
-				"navigationBarTitleText":"热门分类"
+		}, {
+			"path": "pages/addInput/addInput",
+			"style": {
+				"app-plus": {
+					//禁用原生导航
+					"titleNView": false
+				}
 			}
-        }
-        ,{
-            "path" : "pages/topicDetail/topicDetail",
-            "style" : {
-				"app-plus":{
-					"titleNView":{
-						"type":"transparent",
-						"buttons":[{
-							"type":"menu"
+		}
+
+		, {
+			"path": "pages/topicNav/topicNav",
+			"style": {
+				"navigationBarTitleText": "热门分类"
+			}
+		}, {
+			"path": "pages/topicDetail/topicDetail",
+			"style": {
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent",
+						"buttons": [{
+							"type": "menu"
 						}]
 					}
 				}
 			}
-        }
-        ,{
-            "path" : "pages/userList/userList",
-            "style" : {
-				"app-plus":{
+		}, {
+			"path": "pages/userList/userList",
+			"style": {
+				"app-plus": {
 					//动画效果
-					"animationType":"slide-in-left",
-					"titleNView":{
+					"animationType": "slide-in-left",
+					"titleNView": {
 						//取消返回按钮
-						"autoBackButton":false,
-						"searchInput":{
-							"align":"left",
-							"backgroundColor":"#f5f4f2",
-							"borderRadius":"4px",
-							"placeholder":"搜索好友",
-							"placeholderColor":"#666666",
-							"disabled":true
+						"autoBackButton": false,
+						"searchInput": {
+							"align": "left",
+							"backgroundColor": "#f5f4f2",
+							"borderRadius": "4px",
+							"placeholder": "搜索好友",
+							"placeholderColor": "#666666",
+							"disabled": true
 						},
+						"buttons": [{
+							"float": "right",
+							"fontSize": "15px",
+							"color": "#333333",
+							"text": "取消",
+							"colorPressed": "#007AFF"
+						}]
+					}
+				}
+			}
+		}, {
+			"path": "pages/userChat/userChat",
+			"style": {
+				"app-plus": {
+					"bounce":"none",
+					"titleNView": {
+						"buttons": [{
+							"color": "#000000",
+							"colorPressed": "#BBBBBB",
+							"float": "right",
+							"fontSize": "22px",
+							"fontSrc": "/static/font/icon.ttf",
+							"text": "\ue628"
+						}]
+					}
+				}
+			}
+		}
+	    ,{
+            "path" : "pages/detail/detail",
+            "style" : {
+				"navigationBarTitleText":"内容详情页",
+				"app-plus":{
+					"scrollIndicator":"none",
+					"bounce":"none",
+					"titleNView":{
 						"buttons":[
 							{
-								"float":"right",
-								"fontSize":"15px",
-								"color":"#333333",
-								"text":"取消",
-								"colorPressed":"#007AFF"
+								"type":"menu"
 							}
 						]
 					}
 				}
 			}
-        }
-        ,{
-            "path" : "pages/userChat/userChat",
-            "style" : {}
         }
     ],
 	"globalStyle": {

@@ -94,7 +94,11 @@ export default {
 		},
 		//进入详情页
 		opendetail(){
-			console.log('进入详情页')
+			// console.log('进入详情页')
+			// this.$emit('opendetail',this.item)
+			uni.navigateTo({
+				url:"/pages/detail/detail?detailData="+JSON.stringify(this.item)
+			})
 		},
 
 		

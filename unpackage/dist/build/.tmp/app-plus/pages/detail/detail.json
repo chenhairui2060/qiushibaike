@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "内容详情页",
+  "scrollIndicator": "none",
+  "bounce": "none",
+  "titleNView": {
+    "buttons": [
+      {
+        "type": "menu"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

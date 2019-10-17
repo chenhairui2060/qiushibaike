@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"page { padding: 0 ",[0,20],"; }\n",],undefined,{path:"./pages/userSetRepassword/userSetRepassword.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/userSetRepassword/userSetRepassword.wxml') } }));

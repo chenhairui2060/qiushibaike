@@ -171,8 +171,8 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
       {
         icon: '',
         name: '意见反馈',
-        clicktype: '',
-        url: '' },
+        clicktype: 'navigateTo',
+        url: '/pages/userSetHelp/userSetHelp' },
 
       {
         icon: '',

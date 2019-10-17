@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"icon-fabu.",[1],"data-v-d9992c16{ font-size: ",[0,40],"; }\n",],undefined,{path:"./pages/userChat/userChat.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/userChat/userChat.wxml') } }));

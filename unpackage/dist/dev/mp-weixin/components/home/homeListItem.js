@@ -123,6 +123,7 @@ var _default =
 
   methods: {
     openEvent: function openEvent(item) {
+      console.log(item);
       switch (item.clicktype) {
         case 'navigateTo':
           if (item.url) {

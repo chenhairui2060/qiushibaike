@@ -1,0 +1,15 @@
+{
+  "titleNView": {
+    "type": "transparent",
+    "buttons": [
+      {
+        "type": "menu"
+      }
+    ]
+  },
+  "usingComponents": {
+    "topic-info": "/components/topicDetail/topicInfo",
+    "common-list": "/components/common/commonList",
+    "load-more": "/components/common/loadmore"
+  }
+}

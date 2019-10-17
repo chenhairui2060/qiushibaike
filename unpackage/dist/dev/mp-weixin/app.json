@@ -15,7 +15,8 @@
     "pages/userSet/userSet",
     "pages/userSetRepassword/userSetRepassword",
     "pages/userSetEmail/userSetEmail",
-    "pages/userSetUserinfo/userSetUserinfo"
+    "pages/userSetUserinfo/userSetUserinfo",
+    "pages/userSetHelp/userSetHelp"
   ],
   "subPackages": [],
   "window": {
@@ -56,6 +57,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap56.json"
+  "usingComponents": {}
 }

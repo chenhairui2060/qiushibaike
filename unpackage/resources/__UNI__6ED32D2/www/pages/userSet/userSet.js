@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"body.",[1],"data-v-5d24bca2 { padding: 0 ",[0,20],"; }\n",],undefined,{path:"./pages/userSet/userSet.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/userSet/userSet.wxml') } }));

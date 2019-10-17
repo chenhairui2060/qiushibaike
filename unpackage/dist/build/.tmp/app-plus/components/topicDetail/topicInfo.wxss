@@ -1,0 +1,11 @@
+
+.filter.data-v-26f2eae2{
+	-webkit-filter: blur(10rpx);
+	        filter: blur(10rpx);
+}
+.page.data-v-26f2eae2{
+	height: 100%;
+	width: 100%;
+	background: #E5E5E5;
+}
+

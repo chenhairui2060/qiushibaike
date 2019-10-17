@@ -16,6 +16,7 @@ export default {
 	},
 	methods: {
 		openEvent(item) {
+			console.log(item)
 			switch (item.clicktype) {
 				case 'navigateTo':
 					if (item.url) {

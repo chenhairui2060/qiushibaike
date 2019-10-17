@@ -1,0 +1,9 @@
+
+.home-adv > image.data-v-1515b7db {
+	border-radius: 20rpx;
+	height: 150rpx;
+}
+.home-list.data-v-1515b7db {
+	padding: 20rpx;
+}
+

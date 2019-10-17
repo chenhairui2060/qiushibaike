@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"home-adv \x3e wx-image.",[1],"data-v-1515b7db { border-radius: ",[0,20],"; height: ",[0,150],"; }\n.",[1],"home-list.",[1],"data-v-1515b7db { padding: ",[0,20],"; }\n",],undefined,{path:"./pages/home/home.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/home/home.wxml') } }));

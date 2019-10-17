@@ -1,0 +1,9 @@
+.active.data-v-20b3e2f2{
+	color: #E80080;
+	font-size: 40rpx;
+	font-weight: bold;
+}
+.nothing image.data-v-20b3e2f2{
+	width: 50%;
+}
+

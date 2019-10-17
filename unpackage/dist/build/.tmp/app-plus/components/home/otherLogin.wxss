@@ -1,0 +1,23 @@
+
+.other-login.data-v-21ae1bbe {
+	padding: 20rpx 40rpx;
+}
+.other-login > view > view.data-v-21ae1bbe {
+	height: 100rpx;
+	width: 100rpx;
+	border: 1px solid;
+	border-radius: 100%;
+	font-size: 55rpx;
+	text-align: center;
+	color: #ffffff;
+}
+.icon-weixin.data-v-21ae1bbe {
+	background: #2bd19b;
+}
+.icon-xinlangweibo.data-v-21ae1bbe {
+	background: #fc7729;
+}
+.icon-QQ.data-v-21ae1bbe {
+	background: #2caefc;
+}
+

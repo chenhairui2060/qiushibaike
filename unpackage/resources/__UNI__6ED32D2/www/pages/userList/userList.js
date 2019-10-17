@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"active.",[1],"data-v-6ab93733 { color: #e80080; font-size: ",[0,40],"; font-weight: bold; }\n",],undefined,{path:"./pages/userList/userList.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/userList/userList.wxml') } }));

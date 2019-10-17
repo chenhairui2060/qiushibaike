@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"active.",[1],"data-v-20b3e2f2{ color: #E80080; font-size: ",[0,40],"; font-weight: bold; }\n.",[1],"nothing wx-image.",[1],"data-v-20b3e2f2{ width: 50%; }\n",],undefined,{path:"./pages/topicDetail/topicDetail.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/topicDetail/topicDetail.wxml') } }));

@@ -247,6 +247,15 @@
 				}
 			}
         }
+        ,{
+            "path" : "pages/userSetHelp/userSetHelp",
+            "style" : {
+				"navigationBarTitleText":"意见反馈",
+				"app-plus":{
+					"scrollIndicator":"none"
+				}
+			}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

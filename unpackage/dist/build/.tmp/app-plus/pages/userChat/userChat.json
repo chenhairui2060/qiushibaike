@@ -1,0 +1,18 @@
+{
+  "bounce": "none",
+  "titleNView": {
+    "buttons": [
+      {
+        "color": "#000000",
+        "colorPressed": "#BBBBBB",
+        "float": "right",
+        "fontSize": "22px",
+        "fontSrc": "/static/font/icon.ttf",
+        "text": ""
+      }
+    ]
+  },
+  "usingComponents": {
+    "user-chat-list": "/components/userChat/userChatList"
+  }
+}

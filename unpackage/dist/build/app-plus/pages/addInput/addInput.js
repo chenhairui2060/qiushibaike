@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"uni-textarea.",[1],"data-v-2eebdd3f { border: ",[0,1]," solid #eeeeee; }\n.",[1],"cell-pd.",[1],"data-v-2eebdd3f { padding: ",[0,22]," ",[0,30],"; }\n.",[1],"list-pd.",[1],"data-v-2eebdd3f { margin-top: ",[0,50],"; }\n",],undefined,{path:"./pages/addInput/addInput.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/addInput/addInput.wxml') } }));

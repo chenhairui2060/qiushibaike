@@ -120,7 +120,26 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var uniNavBar = function uniNavBar() {return __webpack_require__.e(/*! import() | components/uni-nav-bar/uni-nav-bar */ "components/uni-nav-bar/uni-nav-bar").then(__webpack_require__.bind(null, /*! ../../components/uni-nav-bar/uni-nav-bar.vue */ 91));};var commonList = function commonList() {return __webpack_require__.e(/*! import() | components/common/commonList */ "components/common/commonList").then(__webpack_require__.bind(null, /*! ../../components/common/commonList.vue */ 145));};var newsNavBar = function newsNavBar() {return __webpack_require__.e(/*! import() | components/news/newsNavBar */ "components/news/newsNavBar").then(__webpack_require__.bind(null, /*! ../../components/news/newsNavBar.vue */ 142));};var noThing = function noThing() {return __webpack_require__.e(/*! import() | components/common/noThing */ "components/common/noThing").then(__webpack_require__.bind(null, /*! ../../components/common/noThing.vue */ 84));};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var uniNavBar = function uniNavBar() {return __webpack_require__.e(/*! import() | components/uni-nav-bar/uni-nav-bar */ "components/uni-nav-bar/uni-nav-bar").then(__webpack_require__.bind(null, /*! @/components/uni-nav-bar/uni-nav-bar.vue */ 163));};var commonList = function commonList() {return __webpack_require__.e(/*! import() | components/common/commonList */ "components/common/commonList").then(__webpack_require__.bind(null, /*! @/components/common/commonList.vue */ 170));};var newsNavBar = function newsNavBar() {return __webpack_require__.e(/*! import() | components/news/newsNavBar */ "components/news/newsNavBar").then(__webpack_require__.bind(null, /*! @/components/news/newsNavBar.vue */ 177));};var noThing = function noThing() {return __webpack_require__.e(/*! import() | components/common/noThing */ "components/common/noThing").then(__webpack_require__.bind(null, /*! @/components/common/noThing.vue */ 156));};var hotCate = function hotCate() {return __webpack_require__.e(/*! import() | components/news/hotCate */ "components/news/hotCate").then(__webpack_require__.bind(null, /*! @/components/news/hotCate.vue */ 184));};var topicList = function topicList() {return __webpack_require__.e(/*! import() | components/news/topicList */ "components/news/topicList").then(__webpack_require__.bind(null, /*! @/components/news/topicList.vue */ 189));};var _default =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -157,7 +176,9 @@ __webpack_require__.r(__webpack_exports__);
     uniNavBar: uniNavBar,
     commonList: commonList,
     newsNavBar: newsNavBar,
-    noThing: noThing },
+    noThing: noThing,
+    hotCate: hotCate,
+    topicList: topicList },
 
   data: function data() {
     return {
@@ -171,7 +192,7 @@ __webpack_require__.r(__webpack_exports__);
         username: '曲调',
         sex: 0, //0 男 1 女
         age: 25,
-        isguanzhu: false,
+        isguanzhu: true,
         title: '我的标题',
         titlepic: '/static/demo/datapic/15.jpg',
         video: false,
@@ -187,7 +208,7 @@ __webpack_require__.r(__webpack_exports__);
         username: '曲调',
         sex: 0, //0 男 1 女
         age: 25,
-        isguanzhu: false,
+        isguanzhu: true,
         title: '我的标题',
         titlepic: '/static/demo/datapic/15.jpg',
         video: {
@@ -206,7 +227,7 @@ __webpack_require__.r(__webpack_exports__);
         username: '曲调',
         sex: 1, //0 男 1 女
         age: 25,
-        isguanzhu: false,
+        isguanzhu: true,
         title: '我的标题',
         video: false,
         share: {
@@ -219,7 +240,28 @@ __webpack_require__.r(__webpack_exports__);
         goodnum: 20 }],
 
 
-      htlist: [] };
+      hotCate: [{ name: '关注' }, { name: '推荐' }, { name: '体育' }, { name: '热点' }, { name: '财经' }, { name: '娱乐' }],
+      topicList: [{
+        cover: '/static/demo/datapic/15.jpg',
+        title: '话题名称',
+        desc: '话题描述',
+        today_count: 0,
+        news_count: 10 },
+
+      {
+        cover: '/static/demo/datapic/15.jpg',
+        title: '话题名称',
+        desc: '话题描述',
+        today_count: 0,
+        news_count: 10 },
+
+      {
+        cover: '/static/demo/datapic/15.jpg',
+        title: '话题名称',
+        desc: '话题描述',
+        today_count: 0,
+        news_count: 10 }] };
+
 
   },
   onLoad: function onLoad() {

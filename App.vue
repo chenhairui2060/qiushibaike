@@ -23,4 +23,6 @@ export default {
 @import url('./common/animate.css');
 /* 引入公共样式 */
 @import url('./common/common.css');
+/* 引入表单公共样式 */
+@import url('./common/form.css');
 </style>

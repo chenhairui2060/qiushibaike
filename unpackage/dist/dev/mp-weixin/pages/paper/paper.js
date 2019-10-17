@@ -120,20 +120,127 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
 //
 //
-var _default =
-{
-  data: function data() {
-    return {};
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
+var demo = [
+{
+  avatar: '/static/demo/demo66.jpg',
+  username: '曲调',
+  upaate_time: 1571187167,
+  data: '内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容',
+  noread: 20 },
+
+{
+  avatar: '/static/demo/demo5.jpg',
+  username: '阿拉善',
+  upaate_time: 1571187190,
+  data: '内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容',
+  noread: 18 },
+
+{
+  avatar: '/static/demo/demo5.jpg',
+  username: '阿拉善',
+  upaate_time: 1571187212,
+  data: '内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容',
+  noread: 18 },
+
+{
+  avatar: '/static/demo/demo5.jpg',
+  username: '阿拉善',
+  upaate_time: 1571187264,
+  data: '内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容',
+  noread: 18 }];var msgList = function msgList() {return Promise.all(/*! import() | components/msg/msgList */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/msg/msgList")]).then(__webpack_require__.bind(null, /*! @/components/msg/msgList.vue */ 194));};var noThing = function noThing() {return __webpack_require__.e(/*! import() | components/common/noThing */ "components/common/noThing").then(__webpack_require__.bind(null, /*! @/components/common/noThing.vue */ 156));};var uniPopup = function uniPopup() {return __webpack_require__.e(/*! import() | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/components/uni-popup/uni-popup.vue */ 200));};var _default =
+
+
+
+
+
+{
+  components: {
+    msgList: msgList,
+    noThing: noThing,
+    uniPopup: uniPopup },
+
+  data: function data() {
+    return {
+      list: [
+      {
+        avatar: '/static/demo/demo5.jpg',
+        username: '阿拉善',
+        upaate_time: 1571187264,
+        data: '内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容',
+        noread: 18 }],
+
+
+      type: 'top' };
 
   },
-  methods: {} };exports.default = _default;
+  //监听下拉刷新
+  onPullDownRefresh: function onPullDownRefresh() {
+    this.refresh();
+  },
+  //监听原生导航栏按钮事件
+  onNavigationBarButtonTap: function onNavigationBarButtonTap(e) {
+    console.log(e);
+    switch (e.index) {
+      case 0: //左边
+        uni.navigateTo({
+          url: "../userList/userList" });
+
+        this.$refs.popup.close();
+        break;
+      case 1: //右边
+        this.$refs.popup.open();
+        break;}
+
+  },
+  onLoad: function onLoad() {
+    // console.log($T)
+  },
+  methods: {
+    //下拉刷新
+    refresh: function refresh() {var _this = this;
+      setTimeout(function () {
+        _this.list = demo;
+        //停止下拉刷新
+        uni.stopPullDownRefresh();
+      }, 2000);
+    },
+    popupEvent: function popupEvent(e) {
+      switch (e) {
+        case 'friend':
+          console.log('添加好友');
+          break;
+        case 'clear':
+          console.log('清除列表');
+          break;}
+
+      //关闭弹出层
+      this.$refs.popup.close();
+    } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ })
 

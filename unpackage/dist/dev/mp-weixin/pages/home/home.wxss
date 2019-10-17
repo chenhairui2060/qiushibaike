@@ -1,0 +1,9 @@
+
+.home-adv > image.data-v-d510084e {
+	border-radius: 20rpx;
+	height: 150rpx;
+}
+.home-list.data-v-d510084e {
+	padding: 20rpx;
+}
+

@@ -213,6 +213,40 @@
 				}
 			}
         }
+        ,{
+            "path" : "pages/userSet/userSet",
+            "style" : {
+				"navigationBarTitleText":"设置"
+			}
+        }
+        ,{
+            "path" : "pages/userSetRepassword/userSetRepassword",
+            "style" : {
+				"navigationBarTitleText":"修改密码",
+				"app-plus":{
+					"scrollIndicator":"none"
+				}
+			}
+        }
+        
+        ,{
+            "path" : "pages/userSetEmail/userSetEmail",
+            "style" : {
+				"navigationBarTitleText":"修改邮箱",
+				"app-plus":{
+					"scrollIndicator":"none"
+				}
+			}
+        }
+        ,{
+            "path" : "pages/userSetUserinfo/userSetUserinfo",
+            "style" : {
+				"navigationBarTitleText":"编辑资料",
+				"app-plus":{
+					"scrollIndicator":"none"
+				}
+			}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

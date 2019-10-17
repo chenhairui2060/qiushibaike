@@ -6,7 +6,16 @@
     "pages/home/home",
     "pages/demo/demo",
     "pages/search/search",
-    "pages/addInput/addInput"
+    "pages/addInput/addInput",
+    "pages/topicNav/topicNav",
+    "pages/topicDetail/topicDetail",
+    "pages/userList/userList",
+    "pages/userChat/userChat",
+    "pages/detail/detail",
+    "pages/userSet/userSet",
+    "pages/userSetRepassword/userSetRepassword",
+    "pages/userSetEmail/userSetEmail",
+    "pages/userSetUserinfo/userSetUserinfo"
   ],
   "subPackages": [],
   "window": {
@@ -47,5 +56,6 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap56.json"
 }

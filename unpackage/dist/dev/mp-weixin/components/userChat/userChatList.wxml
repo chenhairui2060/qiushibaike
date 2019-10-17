@@ -1,0 +1,1 @@
+<view class="u-f align-start px-2 mx-2" style="{{(isSelf?'flex-direction:row-reverse;':'')}}"><image class="rounded-circle" style="height:100rpx;width:100rpx;" src="{{item.avatar}}" mode></image><view class="bg-light p-2 rounded mx-2" style="max-width:400rpx;min-width:100rpx;">{{''+item.data+''}}</view></view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "load-more": "/components/common/loadmore",
+    "no-thing": "/components/common/noThing",
+    "uni-badge": "/components/uni-badge/uni-badge"
+  }
+}

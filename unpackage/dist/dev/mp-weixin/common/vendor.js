@@ -1604,103 +1604,6 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ 199:
-/*!**************************************!*\
-  !*** E:/uniapp/仿糗事百科/common/time.js ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var gettime = {
-  // 计算当前日期星座
-  getHoroscope: function getHoroscope(date) {
-    var c = ['摩羯', '水瓶', '双鱼', '白羊', '金牛', '双子', '巨蟹', '狮子', '处女', '天秤', '天蝎', '射手', '摩羯'];
-    date = new Date(date);
-    var month = date.getMonth() + 1;
-    var day = date.getDate();
-    var startMonth = month - (day - 14 < '865778999988'.charAt(month));
-    return c[startMonth] + '座';
-  },
-  // 计算指定时间与当前的时间差
-  sumAge: function sumAge(data) {
-    var dateBegin = new Date(data.replace(/-/g, "/"));
-    var dateEnd = new Date(); //获取当前时间
-    var dateDiff = dateEnd.getTime() - dateBegin.getTime(); //时间差的毫秒数
-    var dayDiff = Math.floor(dateDiff / (24 * 3600 * 1000)); //计算出相差天数
-    var leave1 = dateDiff % (24 * 3600 * 1000); //计算天数后剩余的毫秒数
-    var hours = Math.floor(leave1 / (3600 * 1000)); //计算出小时数
-    //计算相差分钟数
-    var leave2 = leave1 % (3600 * 1000); //计算小时数后剩余的毫秒数
-    var minutes = Math.floor(leave2 / (60 * 1000)); //计算相差分钟数
-    //计算相差秒数
-    var leave3 = leave2 % (60 * 1000); //计算分钟数后剩余的毫秒数
-    var seconds = Math.round(leave3 / 1000);
-    return dayDiff + "天 " + hours + "小时 ";
-  },
-  // 获取聊天时间（相差300s内的信息不会显示时间）
-  getChatTime: function getChatTime(v1, v2) {
-    v1 = v1.toString().length < 13 ? v1 * 1000 : v1;
-    v2 = v2.toString().length < 13 ? v2 * 1000 : v2;
-    if ((parseInt(v1) - parseInt(v2)) / 1000 > 300) {
-      return this.gettime(v1);
-    }
-  },
-  // 人性化时间格式
-  gettime: function gettime(shorttime) {
-    shorttime = shorttime.toString().length < 13 ? shorttime * 1000 : shorttime;
-    var now = new Date().getTime();
-    var cha = (now - parseInt(shorttime)) / 1000;
-
-    if (cha < 43200) {
-      // 当天
-      return this.dateFormat(new Date(shorttime), "{A} {t}:{ii}");
-    } else if (cha < 518400) {
-      // 隔天 显示日期+时间
-      return this.dateFormat(new Date(shorttime), "{Mon}月{DD}日 {A} {t}:{ii}");
-    } else {
-      // 隔年 显示完整日期+时间
-      return this.dateFormat(new Date(shorttime), "{Y}-{MM}-{DD} {A} {t}:{ii}");
-    }
-  },
-
-  parseNumber: function parseNumber(num) {
-    return num < 10 ? "0" + num : num;
-  },
-
-  dateFormat: function dateFormat(date, formatStr) {
-    var dateObj = {},
-    rStr = /\{([^}]+)\}/,
-    mons = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二'];
-
-    dateObj["Y"] = date.getFullYear();
-    dateObj["M"] = date.getMonth() + 1;
-    dateObj["MM"] = this.parseNumber(dateObj["M"]);
-    dateObj["Mon"] = mons[dateObj['M'] - 1];
-    dateObj["D"] = date.getDate();
-    dateObj["DD"] = this.parseNumber(dateObj["D"]);
-    dateObj["h"] = date.getHours();
-    dateObj["hh"] = this.parseNumber(dateObj["h"]);
-    dateObj["t"] = dateObj["h"] > 12 ? dateObj["h"] - 12 : dateObj["h"];
-    dateObj["tt"] = this.parseNumber(dateObj["t"]);
-    dateObj["A"] = dateObj["h"] > 12 ? '下午' : '上午';
-    dateObj["i"] = date.getMinutes();
-    dateObj["ii"] = this.parseNumber(dateObj["i"]);
-    dateObj["s"] = date.getSeconds();
-    dateObj["ss"] = this.parseNumber(dateObj["s"]);
-
-    while (rStr.test(formatStr)) {
-      formatStr = formatStr.replace(rStr, dateObj[RegExp.$1]);
-    }
-    return formatStr;
-  } };var _default =
-
-
-{
-  gettime: gettime };exports.default = _default;
-
-/***/ }),
-
 /***/ 2:
 /*!******************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js ***!
@@ -7664,19 +7567,116 @@ internalMixin(Vue);
 
 /***/ }),
 
-/***/ 240:
+/***/ 221:
+/*!**************************************!*\
+  !*** E:/uniapp/仿糗事百科/common/time.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var gettime = {
+  // 计算当前日期星座
+  getHoroscope: function getHoroscope(date) {
+    var c = ['摩羯', '水瓶', '双鱼', '白羊', '金牛', '双子', '巨蟹', '狮子', '处女', '天秤', '天蝎', '射手', '摩羯'];
+    date = new Date(date);
+    var month = date.getMonth() + 1;
+    var day = date.getDate();
+    var startMonth = month - (day - 14 < '865778999988'.charAt(month));
+    return c[startMonth] + '座';
+  },
+  // 计算指定时间与当前的时间差
+  sumAge: function sumAge(data) {
+    var dateBegin = new Date(data.replace(/-/g, "/"));
+    var dateEnd = new Date(); //获取当前时间
+    var dateDiff = dateEnd.getTime() - dateBegin.getTime(); //时间差的毫秒数
+    var dayDiff = Math.floor(dateDiff / (24 * 3600 * 1000)); //计算出相差天数
+    var leave1 = dateDiff % (24 * 3600 * 1000); //计算天数后剩余的毫秒数
+    var hours = Math.floor(leave1 / (3600 * 1000)); //计算出小时数
+    //计算相差分钟数
+    var leave2 = leave1 % (3600 * 1000); //计算小时数后剩余的毫秒数
+    var minutes = Math.floor(leave2 / (60 * 1000)); //计算相差分钟数
+    //计算相差秒数
+    var leave3 = leave2 % (60 * 1000); //计算分钟数后剩余的毫秒数
+    var seconds = Math.round(leave3 / 1000);
+    return dayDiff + "天 " + hours + "小时 ";
+  },
+  // 获取聊天时间（相差300s内的信息不会显示时间）
+  getChatTime: function getChatTime(v1, v2) {
+    v1 = v1.toString().length < 13 ? v1 * 1000 : v1;
+    v2 = v2.toString().length < 13 ? v2 * 1000 : v2;
+    if ((parseInt(v1) - parseInt(v2)) / 1000 > 300) {
+      return this.gettime(v1);
+    }
+  },
+  // 人性化时间格式
+  gettime: function gettime(shorttime) {
+    shorttime = shorttime.toString().length < 13 ? shorttime * 1000 : shorttime;
+    var now = new Date().getTime();
+    var cha = (now - parseInt(shorttime)) / 1000;
+
+    if (cha < 43200) {
+      // 当天
+      return this.dateFormat(new Date(shorttime), "{A} {t}:{ii}");
+    } else if (cha < 518400) {
+      // 隔天 显示日期+时间
+      return this.dateFormat(new Date(shorttime), "{Mon}月{DD}日 {A} {t}:{ii}");
+    } else {
+      // 隔年 显示完整日期+时间
+      return this.dateFormat(new Date(shorttime), "{Y}-{MM}-{DD} {A} {t}:{ii}");
+    }
+  },
+
+  parseNumber: function parseNumber(num) {
+    return num < 10 ? "0" + num : num;
+  },
+
+  dateFormat: function dateFormat(date, formatStr) {
+    var dateObj = {},
+    rStr = /\{([^}]+)\}/,
+    mons = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二'];
+
+    dateObj["Y"] = date.getFullYear();
+    dateObj["M"] = date.getMonth() + 1;
+    dateObj["MM"] = this.parseNumber(dateObj["M"]);
+    dateObj["Mon"] = mons[dateObj['M'] - 1];
+    dateObj["D"] = date.getDate();
+    dateObj["DD"] = this.parseNumber(dateObj["D"]);
+    dateObj["h"] = date.getHours();
+    dateObj["hh"] = this.parseNumber(dateObj["h"]);
+    dateObj["t"] = dateObj["h"] > 12 ? dateObj["h"] - 12 : dateObj["h"];
+    dateObj["tt"] = this.parseNumber(dateObj["t"]);
+    dateObj["A"] = dateObj["h"] > 12 ? '下午' : '上午';
+    dateObj["i"] = date.getMinutes();
+    dateObj["ii"] = this.parseNumber(dateObj["i"]);
+    dateObj["s"] = date.getSeconds();
+    dateObj["ss"] = this.parseNumber(dateObj["s"]);
+
+    while (rStr.test(formatStr)) {
+      formatStr = formatStr.replace(rStr, dateObj[RegExp.$1]);
+    }
+    return formatStr;
+  } };var _default =
+
+
+{
+  gettime: gettime };exports.default = _default;
+
+/***/ }),
+
+/***/ 262:
 /*!**********************************************************!*\
   !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
   \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! regenerator-runtime */ 241);
+module.exports = __webpack_require__(/*! regenerator-runtime */ 263);
 
 
 /***/ }),
 
-/***/ 241:
+/***/ 263:
 /*!************************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
   \************************************************************/
@@ -7707,7 +7707,7 @@ var oldRuntime = hadRuntime && g.regeneratorRuntime;
 // Force reevalutation of runtime.js.
 g.regeneratorRuntime = undefined;
 
-module.exports = __webpack_require__(/*! ./runtime */ 242);
+module.exports = __webpack_require__(/*! ./runtime */ 264);
 
 if (hadRuntime) {
   // Restore the original runtime.
@@ -7724,7 +7724,7 @@ if (hadRuntime) {
 
 /***/ }),
 
-/***/ 242:
+/***/ 264:
 /*!*****************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime.js ***!
   \*****************************************************/
@@ -8456,7 +8456,7 @@ if (hadRuntime) {
 
 /***/ }),
 
-/***/ 269:
+/***/ 291:
 /*!*************************************************************************!*\
   !*** E:/uniapp/仿糗事百科/components/mpvue-citypicker/city-data/province.js ***!
   \*************************************************************************/
@@ -8606,7 +8606,7 @@ provinceData;exports.default = _default;
 
 /***/ }),
 
-/***/ 270:
+/***/ 292:
 /*!*********************************************************************!*\
   !*** E:/uniapp/仿糗事百科/components/mpvue-citypicker/city-data/city.js ***!
   \*********************************************************************/
@@ -10120,7 +10120,7 @@ cityData;exports.default = _default;
 
 /***/ }),
 
-/***/ 271:
+/***/ 293:
 /*!*********************************************************************!*\
   !*** E:/uniapp/仿糗事百科/components/mpvue-citypicker/city-data/area.js ***!
   \*********************************************************************/
@@ -23619,7 +23619,7 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "usingComponents": { "index-list": "/components/index/indexList/index-list", "swiper-tab": "/components/index/swiperTab/swiper-tab", "load-more": "/components/common/loadmore", "no-thing": "/components/common/noThing" } }, "pages/news/news": { "usingComponents": { "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar", "common-list": "/components/common/commonList", "news-nav-bar": "/components/news/newsNavBar", "no-thing": "/components/common/noThing", "hot-cate": "/components/news/hotCate", "topic-list": "/components/news/topicList" } }, "pages/paper/paper": { "navigationBarTitleText": "消息列表", "enablePullDownRefresh": true, "usingComponents": { "msg-list": "/components/msg/msgList", "no-thing": "/components/common/noThing", "uni-popup": "/components/uni-popup/uni-popup" } }, "pages/home/home": { "navigationBarTitleText": "我的", "usingComponents": { "home-list-item": "/components/home/homeListItem", "home-info": "/components/home/homeInfo", "home-data": "/components/home/homeData", "other-login": "/components/home/otherLogin" } }, "pages/demo/demo": { "navigationBarTitleText": "demo", "usingComponents": {} }, "pages/search/search": { "usingComponents": {} }, "pages/addInput/addInput": { "usingComponents": { "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar", "up-load-imgs": "/components/common/uploadImgs", "uni-popup": "/components/uni-popup/uni-popup" } }, "pages/topicNav/topicNav": { "navigationBarTitleText": "热门分类", "usingComponents": { "topic-list": "/components/news/topicList", "swiper-tab": "/components/index/swiperTab/swiper-tab", "load-more": "/components/common/loadmore", "no-thing": "/components/common/noThing" } }, "pages/topicDetail/topicDetail": { "usingComponents": { "topic-info": "/components/topicDetail/topicInfo", "common-list": "/components/common/commonList", "load-more": "/components/common/loadmore" } }, "pages/userList/userList": { "usingComponents": { "load-more": "/components/common/loadmore", "no-thing": "/components/common/noThing", "uni-badge": "/components/uni-badge/uni-badge" } }, "pages/userChat/userChat": { "usingComponents": { "user-chat-list": "/components/userChat/userChatList" } }, "pages/detail/detail": { "navigationBarTitleText": "内容详情页", "usingComponents": {} }, "pages/userSet/userSet": { "navigationBarTitleText": "设置", "usingComponents": { "home-list-item": "/components/home/homeListItem" } }, "pages/userSetRepassword/userSetRepassword": { "navigationBarTitleText": "修改密码", "usingComponents": {} }, "pages/userSetEmail/userSetEmail": { "navigationBarTitleText": "修改邮箱", "usingComponents": {} }, "pages/userSetUserinfo/userSetUserinfo": { "navigationBarTitleText": "编辑资料", "usingComponents": { "mpvue-city-picker": "/components/mpvue-citypicker/mpvueCityPicker" } }, "pages/userSetHelp/userSetHelp": { "navigationBarTitleText": "意见反馈", "usingComponents": {} } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "仿糗事百科", "navigationBarBackgroundColor": "#FFFFFF", "backgroundColor": "#FFFFFF" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "usingComponents": { "index-list": "/components/index/indexList/index-list", "swiper-tab": "/components/index/swiperTab/swiper-tab", "load-more": "/components/common/loadmore", "no-thing": "/components/common/noThing" } }, "pages/news/news": { "usingComponents": { "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar", "common-list": "/components/common/commonList", "news-nav-bar": "/components/news/newsNavBar", "no-thing": "/components/common/noThing", "hot-cate": "/components/news/hotCate", "topic-list": "/components/news/topicList" } }, "pages/paper/paper": { "navigationBarTitleText": "消息列表", "enablePullDownRefresh": true, "usingComponents": { "msg-list": "/components/msg/msgList", "no-thing": "/components/common/noThing", "uni-popup": "/components/uni-popup/uni-popup" } }, "pages/home/home": { "navigationBarTitleText": "我的", "usingComponents": { "home-list-item": "/components/home/homeListItem", "home-info": "/components/home/homeInfo", "home-data": "/components/home/homeData", "other-login": "/components/home/otherLogin" } }, "pages/demo/demo": { "navigationBarTitleText": "demo", "usingComponents": {} }, "pages/search/search": { "usingComponents": {} }, "pages/addInput/addInput": { "usingComponents": { "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar", "up-load-imgs": "/components/common/uploadImgs", "uni-popup": "/components/uni-popup/uni-popup" } }, "pages/topicNav/topicNav": { "navigationBarTitleText": "热门分类", "usingComponents": { "topic-list": "/components/news/topicList", "swiper-tab": "/components/index/swiperTab/swiper-tab", "load-more": "/components/common/loadmore", "no-thing": "/components/common/noThing" } }, "pages/topicDetail/topicDetail": { "usingComponents": { "topic-info": "/components/topicDetail/topicInfo", "common-list": "/components/common/commonList", "load-more": "/components/common/loadmore" } }, "pages/userList/userList": { "usingComponents": { "load-more": "/components/common/loadmore", "no-thing": "/components/common/noThing", "uni-badge": "/components/uni-badge/uni-badge" } }, "pages/userChat/userChat": { "usingComponents": { "user-chat-list": "/components/userChat/userChatList" } }, "pages/detail/detail": { "navigationBarTitleText": "内容详情页", "usingComponents": {} }, "pages/userSet/userSet": { "navigationBarTitleText": "设置", "usingComponents": { "home-list-item": "/components/home/homeListItem" } }, "pages/userSetRepassword/userSetRepassword": { "navigationBarTitleText": "修改密码", "usingComponents": {} }, "pages/userSetEmail/userSetEmail": { "navigationBarTitleText": "修改邮箱", "usingComponents": {} }, "pages/userSetUserinfo/userSetUserinfo": { "navigationBarTitleText": "编辑资料", "usingComponents": { "mpvue-city-picker": "/components/mpvue-citypicker/mpvueCityPicker" } }, "pages/userSetHelp/userSetHelp": { "navigationBarTitleText": "意见反馈", "usingComponents": { "uni-collapse": "/components/uni-collapse/uni-collapse", "uni-collapse-item": "/components/uni-collapse-item/uni-collapse-item" } }, "pages/userSetAbout/userSetAbout": { "navigationBarTitleText": "关于糗百", "usingComponents": { "home-list-item": "/components/home/homeListItem" } }, "pages/login/login": { "usingComponents": { "uni-status-bar": "/components/uni-status-bar/uni-status-bar", "other-login": "/components/home/otherLogin" } } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "仿糗事百科", "navigationBarBackgroundColor": "#FFFFFF", "backgroundColor": "#FFFFFF" } };exports.default = _default;
 
 /***/ }),
 

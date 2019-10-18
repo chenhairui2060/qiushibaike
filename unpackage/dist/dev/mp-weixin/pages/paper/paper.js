@@ -171,7 +171,7 @@ var demo = [
   username: '阿拉善',
   upaate_time: 1571187264,
   data: '内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容',
-  noread: 18 }];var msgList = function msgList() {return Promise.all(/*! import() | components/msg/msgList */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/msg/msgList")]).then(__webpack_require__.bind(null, /*! @/components/msg/msgList.vue */ 194));};var noThing = function noThing() {return __webpack_require__.e(/*! import() | components/common/noThing */ "components/common/noThing").then(__webpack_require__.bind(null, /*! @/components/common/noThing.vue */ 156));};var uniPopup = function uniPopup() {return __webpack_require__.e(/*! import() | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/components/uni-popup/uni-popup.vue */ 200));};var _default =
+  noread: 18 }];var msgList = function msgList() {return Promise.all(/*! import() | components/msg/msgList */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/msg/msgList")]).then(__webpack_require__.bind(null, /*! @/components/msg/msgList.vue */ 216));};var noThing = function noThing() {return __webpack_require__.e(/*! import() | components/common/noThing */ "components/common/noThing").then(__webpack_require__.bind(null, /*! @/components/common/noThing.vue */ 178));};var uniPopup = function uniPopup() {return __webpack_require__.e(/*! import() | components/uni-popup/uni-popup */ "components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/components/uni-popup/uni-popup.vue */ 222));};var _default =
 
 
 

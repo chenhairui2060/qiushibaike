@@ -8,7 +8,12 @@
 
 <script>
 	export default{
-		
+		props:{
+			providerList:Array
+		},
+		data() {
+			return{}
+		}
 	}
 </script>
 

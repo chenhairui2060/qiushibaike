@@ -202,7 +202,7 @@ var demo = [
   path: '深圳 龙岗',
   sharenum: 20,
   commentnum: 30,
-  goodnum: 20 }];var topicInfo = function topicInfo() {return __webpack_require__.e(/*! import() | components/topicDetail/topicInfo */ "components/topicDetail/topicInfo").then(__webpack_require__.bind(null, /*! @/components/topicDetail/topicInfo.vue */ 245));};var commonList = function commonList() {return __webpack_require__.e(/*! import() | components/common/commonList */ "components/common/commonList").then(__webpack_require__.bind(null, /*! @/components/common/commonList.vue */ 170));};var loadMore = function loadMore() {return __webpack_require__.e(/*! import() | components/common/loadmore */ "components/common/loadmore").then(__webpack_require__.bind(null, /*! @/components/common/loadmore.vue */ 149));};var _default =
+  goodnum: 20 }];var topicInfo = function topicInfo() {return __webpack_require__.e(/*! import() | components/topicDetail/topicInfo */ "components/topicDetail/topicInfo").then(__webpack_require__.bind(null, /*! @/components/topicDetail/topicInfo.vue */ 267));};var commonList = function commonList() {return __webpack_require__.e(/*! import() | components/common/commonList */ "components/common/commonList").then(__webpack_require__.bind(null, /*! @/components/common/commonList.vue */ 192));};var loadMore = function loadMore() {return __webpack_require__.e(/*! import() | components/common/loadmore */ "components/common/loadmore").then(__webpack_require__.bind(null, /*! @/components/common/loadmore.vue */ 171));};var _default =
 
 
 

@@ -1,0 +1,72 @@
+
+.load-font-color.data-v-27570a8d {
+	color: #cccccc;
+}
+.login-padding.data-v-27570a8d {
+	padding: 20rpx 0;
+}
+.loginhead.data-v-27570a8d {
+	width: 100%;
+}
+.icon-guanbi.data-v-27570a8d {
+	position: fixed;
+	top: 60rpx;
+	left: 30rpx;
+	font-size: 40rpx;
+	font-weight: bold;
+	z-index: 999;
+	color: #333333;
+}
+.body.data-v-27570a8d {
+	padding: 0 20rpx;
+}
+.other-login-title.data-v-27570a8d {
+	position: relative;
+}
+.other-login-title.data-v-27570a8d:before,
+.other-login-title.data-v-27570a8d:after {
+	content: '';
+	position: absolute;
+	height: 1rpx;
+	width: 100rpx;
+	background: #cccccc;
+	top: 50%;
+}
+.other-login-title.data-v-27570a8d:before {
+	left: 25%;
+}
+.other-login-title.data-v-27570a8d:after {
+	right: 25%;
+}
+.login-input-box.data-v-27570a8d {
+	position: relative;
+}
+.login-input-box .forget.data-v-27570a8d {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 150rpx;
+	z-index: 999;
+}
+.forget-input.data-v-27570a8d {
+	padding-right: 150rpx;
+}
+.login-input-box .phone.data-v-27570a8d {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 50rpx;
+	z-index: 999;
+}
+.login-input-box .phone-input.data-v-27570a8d {
+	padding-left: 60rpx;
+}
+.yanzhenma > view.data-v-27570a8d {
+	background: #EEEEEE;
+	border-radius: 10rpx;
+	font-size: 25rpx;
+	width: 150rpx;
+}
+

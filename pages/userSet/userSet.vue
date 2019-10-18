@@ -53,8 +53,8 @@ export default {
 				{
 					icon: '',
 					name: '关于糗百',
-					clicktype:'',
-					url:''
+					clicktype:'navigateTo',
+					url:'/pages/userSetAbout/userSetAbout'
 				}
 			]
 		};

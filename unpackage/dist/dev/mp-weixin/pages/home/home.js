@@ -122,7 +122,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var homeListItem = function homeListItem() {return __webpack_require__.e(/*! import() | components/home/homeListItem */ "components/home/homeListItem").then(__webpack_require__.bind(null, /*! @/components/home/homeListItem.vue */ 207));};var homeInfo = function homeInfo() {return __webpack_require__.e(/*! import() | components/home/homeInfo */ "components/home/homeInfo").then(__webpack_require__.bind(null, /*! @/components/home/homeInfo.vue */ 214));};var otherLogin = function otherLogin() {return __webpack_require__.e(/*! import() | components/home/otherLogin */ "components/home/otherLogin").then(__webpack_require__.bind(null, /*! @/components/home/otherLogin.vue */ 221));};var homeData = function homeData() {return __webpack_require__.e(/*! import() | components/home/homeData */ "components/home/homeData").then(__webpack_require__.bind(null, /*! @/components/home/homeData.vue */ 228));};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var homeListItem = function homeListItem() {return __webpack_require__.e(/*! import() | components/home/homeListItem */ "components/home/homeListItem").then(__webpack_require__.bind(null, /*! @/components/home/homeListItem.vue */ 229));};var homeInfo = function homeInfo() {return __webpack_require__.e(/*! import() | components/home/homeInfo */ "components/home/homeInfo").then(__webpack_require__.bind(null, /*! @/components/home/homeInfo.vue */ 236));};var otherLogin = function otherLogin() {return __webpack_require__.e(/*! import() | components/home/otherLogin */ "components/home/otherLogin").then(__webpack_require__.bind(null, /*! @/components/home/otherLogin.vue */ 243));};var homeData = function homeData() {return __webpack_require__.e(/*! import() | components/home/homeData */ "components/home/homeData").then(__webpack_require__.bind(null, /*! @/components/home/homeData.vue */ 250));};var _default =
 
 
 
@@ -164,7 +164,7 @@ __webpack_require__.r(__webpack_exports__);
 
   data: function data() {
     return {
-      isLogin: true,
+      isLogin: false,
       list: [
       {
         icon: 'liulan',
@@ -221,7 +221,12 @@ __webpack_require__.r(__webpack_exports__);
         break;}
 
   },
-  methods: {} };exports.default = _default;
+  methods: {
+    openLogin: function openLogin() {
+      uni.navigateTo({
+        url: "../login/login" });
+
+    } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),

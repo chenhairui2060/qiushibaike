@@ -40,14 +40,7 @@ export default {
 		return {
 			swiperheight: '',
 			tabIndex: 0,
-			tabBars: [
-				{ name: '关注', id: 'guanzhu' },
-				{ name: '推荐', id: 'tuijian' },
-				{ name: '体育', id: 'tiyu' },
-				{ name: '热点', id: 'redian' },
-				{ name: '财经', id: 'caijing' },
-				{ name: '娱乐', id: 'yule' }
-			],
+			tabBars: [],
 			newsList: [
 				{
 					loadtext: '上拉加载更多',
@@ -139,6 +132,8 @@ export default {
 				console.log(height);
 			}
 		});
+		this.getpostclass();
+
 	},
 	methods: {
 		tabtap(index) {
@@ -194,9 +189,22 @@ export default {
 					});
 					break;
 			}
+		},
+		getpostclass(){
+			uni.request({
+				url:"/api/v1/postclass",
+				method:"GET",
+				success: (res) => {
+					this.tabBars=res.data.data.list;
+				},
+				fail: (err) => {
+					console.log(err)
+				}
+			})
 		}
 	}
 };
+
 </script>
 
 <style>

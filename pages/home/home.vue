@@ -6,7 +6,7 @@
 			<!-- 第三方登录 -->
 			<other-login></other-login>
 			<!-- 账号密码登录 -->
-			<view class="u-f-ajc">
+			<view class="u-f-ajc" @tap="openLogin">
 				账号密码登录
 				<view class="icon iconfont icon-jinru"></view>
 			</view>
@@ -40,7 +40,7 @@ export default {
 	},
 	data() {
 		return {
-			isLogin: true,
+			isLogin: false,
 			list: [
 				{
 					icon: 'liulan',
@@ -97,7 +97,13 @@ export default {
 				break;
 		}
 	},
-	methods: {}
+	methods: {
+		openLogin(){
+			uni.navigateTo({
+				url:"../login/login"
+			})
+		}
+	}
 };
 </script>
 

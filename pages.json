@@ -256,6 +256,25 @@
 				}
 			}
         }
+        ,{
+            "path" : "pages/userSetAbout/userSetAbout",
+            "style" : {
+				"navigationBarTitleText":"关于糗百",
+				"app-plus":{
+					"scrollIndicator":"none"
+				}
+			}
+        }
+        ,{
+            "path" : "pages/login/login",
+            "style" : {
+				"app-plus":{
+					"titleNView":false,//取消原生导航条
+					"bounce":"none",
+					"scrollIndicator":"none"
+				}
+			}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

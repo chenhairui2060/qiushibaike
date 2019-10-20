@@ -1,9 +1,9 @@
 
-.filter.data-v-84d83d60{
+.filter.data-v-261643e6{
 	-webkit-filter: blur(10rpx);
 	        filter: blur(10rpx);
 }
-.page.data-v-84d83d60{
+.page.data-v-261643e6{
 	height: 100%;
 	width: 100%;
 	background: #E5E5E5;

@@ -1,14 +1,14 @@
 
-.load-font-color.data-v-27570a8d {
+.load-font-color.data-v-1a146920 {
 	color: #cccccc;
 }
-.login-padding.data-v-27570a8d {
+.login-padding.data-v-1a146920 {
 	padding: 20rpx 0;
 }
-.loginhead.data-v-27570a8d {
+.loginhead.data-v-1a146920 {
 	width: 100%;
 }
-.icon-guanbi.data-v-27570a8d {
+.icon-guanbi.data-v-1a146920 {
 	position: fixed;
 	top: 60rpx;
 	left: 30rpx;
@@ -17,14 +17,14 @@
 	z-index: 999;
 	color: #333333;
 }
-.body.data-v-27570a8d {
+.body.data-v-1a146920 {
 	padding: 0 20rpx;
 }
-.other-login-title.data-v-27570a8d {
+.other-login-title.data-v-1a146920 {
 	position: relative;
 }
-.other-login-title.data-v-27570a8d:before,
-.other-login-title.data-v-27570a8d:after {
+.other-login-title.data-v-1a146920:before,
+.other-login-title.data-v-1a146920:after {
 	content: '';
 	position: absolute;
 	height: 1rpx;
@@ -32,16 +32,16 @@
 	background: #cccccc;
 	top: 50%;
 }
-.other-login-title.data-v-27570a8d:before {
+.other-login-title.data-v-1a146920:before {
 	left: 25%;
 }
-.other-login-title.data-v-27570a8d:after {
+.other-login-title.data-v-1a146920:after {
 	right: 25%;
 }
-.login-input-box.data-v-27570a8d {
+.login-input-box.data-v-1a146920 {
 	position: relative;
 }
-.login-input-box .forget.data-v-27570a8d {
+.login-input-box .forget.data-v-1a146920 {
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -49,10 +49,10 @@
 	width: 150rpx;
 	z-index: 999;
 }
-.forget-input.data-v-27570a8d {
+.forget-input.data-v-1a146920 {
 	padding-right: 150rpx;
 }
-.login-input-box .phone.data-v-27570a8d {
+.login-input-box .phone.data-v-1a146920 {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -60,10 +60,10 @@
 	width: 50rpx;
 	z-index: 999;
 }
-.login-input-box .phone-input.data-v-27570a8d {
+.login-input-box .phone-input.data-v-1a146920 {
 	padding-left: 60rpx;
 }
-.yanzhenma > view.data-v-27570a8d {
+.yanzhenma > view.data-v-1a146920 {
 	background: #EEEEEE;
 	border-radius: 10rpx;
 	font-size: 25rpx;

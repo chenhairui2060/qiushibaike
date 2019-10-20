@@ -1,12 +1,12 @@
-.common-list.data-v-04ec5de2 {
+.common-list.data-v-71b8b44c {
 	padding: 20rpx;
 }
-.common-list-lt image.data-v-04ec5de2 {
+.common-list-lt image.data-v-71b8b44c {
 	height: 90rpx;
 	width: 90rpx;
 	border-radius: 100%;
 }
-.common-list-rt.data-v-04ec5de2 {
+.common-list-rt.data-v-71b8b44c {
 	-webkit-box-flex: 1;
 	-webkit-flex: 1;
 	    -ms-flex: 1;
@@ -15,20 +15,20 @@
 	border-bottom: 1rpx solid #eeeeee;
 	padding-bottom: 10rpx;
 }
-.common-list-rt > view:nth-child(3) image.data-v-04ec5de2 {
+.common-list-rt > view:nth-child(3) image.data-v-71b8b44c {
 	width: 100%;
 	border-radius: 10rpx;
 }
-.common-list-rt > view:nth-child(1) > view.data-v-04ec5de2:first-child {
+.common-list-rt > view:nth-child(1) > view.data-v-71b8b44c:first-child {
 	color: #999999;
 	font-size: 30rpx;
 }
-.common-list-rt > view:nth-child(1) > view.data-v-04ec5de2:last-child {
+.common-list-rt > view:nth-child(1) > view.data-v-71b8b44c:last-child {
 	background: #eeeeee;
 	padding: 0 8rpx;
 	font-size: 26rpx;
 }
-.icon-nan.data-v-04ec5de2{
+.icon-nan.data-v-71b8b44c{
 	background: #007aff;
 	color: #ffffff;
 	font-size: 23rpx;
@@ -37,7 +37,7 @@
 	border-radius: 20rpx;
 	line-height: 22rpx;
 }
-.icon-nv.data-v-04ec5de2{
+.icon-nv.data-v-71b8b44c{
 	background: #FF3333;
 	color: #ffffff;
 	font-size: 23rpx;
@@ -46,23 +46,23 @@
 	border-radius: 20rpx;
 	line-height: 22rpx;
 }
-.common-list-rt > view.data-v-04ec5de2:nth-child(2) {
+.common-list-rt > view.data-v-71b8b44c:nth-child(2) {
 	font-size: 32rpx;
 	padding: 15rpx 0;
 }
-.common-list-rt > view.data-v-04ec5de2:nth-child(3) {
+.common-list-rt > view.data-v-71b8b44c:nth-child(3) {
 	position: relative;
 	margin-bottom: 10rpx;
 }
-.common-list-play.data-v-04ec5de2,
-.common-list-playInfo.data-v-04ec5de2 {
+.common-list-play.data-v-71b8b44c,
+.common-list-playInfo.data-v-71b8b44c {
 	position: absolute;
 	color: #ffffff;
 }
-.common-list-play.data-v-04ec5de2{
+.common-list-play.data-v-71b8b44c{
 	font-size: 130rpx;
 }
-.common-list-playInfo.data-v-04ec5de2 {
+.common-list-playInfo.data-v-71b8b44c {
 	right: 10rpx;
 	bottom: 10rpx;
 	background: rgba(51,51,51,.72);
@@ -70,21 +70,21 @@
 	border-radius: 20rpx;
 	font-size: 26rpx;
 }
-.common-list-rt > view:nth-child(4) > view.data-v-04ec5de2 {
+.common-list-rt > view:nth-child(4) > view.data-v-71b8b44c {
 	color: #aaaaaa;
 }
-.common-list-rt > view:nth-child(4) > view:nth-child(2) > view.data-v-04ec5de2 {
+.common-list-rt > view:nth-child(4) > view:nth-child(2) > view.data-v-71b8b44c {
 	margin-left: 10rpx;
 	padding-left: 5rpx;
 	font-size: 28rpx;
 }
-.common-list-share.data-v-04ec5de2{
+.common-list-share.data-v-71b8b44c{
 	background: #EEEEEE;
 	width: 100%;
 	padding: 10rpx;
 	border-radius: 10rpx;
 }
-.common-list-share>image.data-v-04ec5de2{
+.common-list-share>image.data-v-71b8b44c{
 	width: 200rpx !important;
 	height: 150rpx !important;
 	margin-left: 10rpx;

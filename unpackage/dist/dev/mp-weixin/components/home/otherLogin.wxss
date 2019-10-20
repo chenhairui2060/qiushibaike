@@ -1,8 +1,8 @@
 
-.other-login.data-v-8144f9aa {
+.other-login.data-v-5113dcb0 {
 	padding: 20rpx 40rpx;
 }
-.other-login > view > view.data-v-8144f9aa {
+.other-login>view>view.data-v-5113dcb0 {
 	height: 100rpx;
 	width: 100rpx;
 	border: 1px solid;
@@ -11,13 +11,13 @@
 	text-align: center;
 	color: #ffffff;
 }
-.icon-weixin.data-v-8144f9aa {
+.icon-weixin.data-v-5113dcb0 {
 	background: #2bd19b;
 }
-.icon-xinlangweibo.data-v-8144f9aa {
+.icon-xinlangweibo.data-v-5113dcb0 {
 	background: #fc7729;
 }
-.icon-QQ.data-v-8144f9aa {
+.icon-QQ.data-v-5113dcb0 {
 	background: #2caefc;
 }
 

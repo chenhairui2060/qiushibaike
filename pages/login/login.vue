@@ -35,11 +35,13 @@
 			{{statusName}}
 			<view class="icon iconfont icon-jinru"></view>
 		</view>
+		<!-- #ifndef H5 -->
 		<!-- 第三方登录 -->
 		<template>
 			<view class="other-login-title u-f-ajc login-padding load-font-color" >第三方登录</view>
 			<other-login :providerList="providerList"></other-login>
 		</template>
+		<!-- #endif -->
 		<!-- 协议 -->
 		<view class="login-rule u-f-ajc login-padding load-font-color">
 			注册即代表您同意

@@ -46,7 +46,7 @@
 		},
 		data() {
 			return {
-				isLogin: false,
+				isLogin: true,
 				list: [{
 						icon: 'liulan',
 						name: '浏览历史',

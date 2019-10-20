@@ -18,7 +18,8 @@
     "pages/userSetUserinfo/userSetUserinfo",
     "pages/userSetHelp/userSetHelp",
     "pages/userSetAbout/userSetAbout",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/userSpace/userSpace"
   ],
   "subPackages": [],
   "window": {
@@ -59,6 +60,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap20.json"
+  "usingComponents": {}
 }

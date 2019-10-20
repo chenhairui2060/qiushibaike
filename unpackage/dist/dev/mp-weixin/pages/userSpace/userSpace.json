@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "个人空间",
+  "usingComponents": {
+    "tag-sex-age": "/components/common/tagSexAge"
+  }
+}

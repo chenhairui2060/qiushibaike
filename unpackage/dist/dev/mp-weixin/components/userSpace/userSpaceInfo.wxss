@@ -1,0 +1,17 @@
+
+.user-space-userinfo.data-v-56e02c12 {
+	padding: 0 30rpx;
+}
+.user-space-userinfo-item.data-v-56e02c12 {
+	padding: 20rpx 0;
+	border-bottom: 1rpx solid #eeeeee;
+}
+.user-space-userinfo-item > view.data-v-56e02c12 {
+	color: #aaaaaa;
+}
+.user-space-userinfo-item > view.data-v-56e02c12:first-child {
+	color: #333333;
+	font-size: 35rpx;
+	padding: 15rpx 0;
+}
+

@@ -1,0 +1,12 @@
+
+.uni-comment-list-child.data-v-9196ebe6 {
+	background: #f4f4f4;
+	padding: 20rpx;
+	border-bottom: 1rpx solid #eeeeee;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	margin: 0;
+	margin-left: 70rpx;
+	width: auto;
+}
+

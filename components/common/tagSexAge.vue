@@ -4,6 +4,7 @@
 
 <script>
 export default {
+	name:"tagSexAge",
 	props: {
 		sex: Number,
 		age: Number

@@ -1,6 +1,9 @@
 {
   "navigationBarTitleText": "个人空间",
   "usingComponents": {
-    "tag-sex-age": "/components/common/tagSexAge"
+    "user-space-head": "/components/userSpace/userSpaceHead",
+    "home-data": "/components/home/homeData",
+    "swiper-tab": "/components/index/swiperTab/swiper-tab",
+    "user-space-info": "/components/userSpace/userSpaceInfo"
   }
 }

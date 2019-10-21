@@ -1,5 +1,5 @@
 
-.tag-sex.data-v-661589a0 {
+.tag-sex.data-v-7b1c487d {
 	background: #007aff;
 	color: #ffffff;
 	font-size: 23rpx;
@@ -8,7 +8,7 @@
 	border-radius: 20rpx;
 	line-height: 22rpx;
 }
-.icon-nv.data-v-661589a0 {
+.icon-nv.data-v-7b1c487d {
 	background: #ff698d !important;
 }
 

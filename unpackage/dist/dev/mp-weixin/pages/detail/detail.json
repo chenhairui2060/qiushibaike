@@ -1,4 +1,7 @@
 {
   "navigationBarTitleText": "内容详情页",
-  "usingComponents": {}
+  "usingComponents": {
+    "detail-info": "/components/detail/detailInfo",
+    "comment-list": "/components/detail/commentList"
+  }
 }

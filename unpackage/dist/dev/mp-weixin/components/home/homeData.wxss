@@ -1,13 +1,13 @@
 
-.home-data.data-v-93242b50 {
+.home-data.data-v-3179e09b {
 	padding: 20rpx 40rpx;
 	color: #989898;
 	font-size: 32rpx;
 }
-.home-data > view > view.data-v-93242b50 {
+.home-data > view > view.data-v-3179e09b {
 	color: #333333;
 }
-.home-adv.data-v-93242b50 {
+.home-adv.data-v-3179e09b {
 	padding: 20rpx;
 }
 

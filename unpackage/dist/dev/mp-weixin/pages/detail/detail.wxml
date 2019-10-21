@@ -1,1 +1,1 @@
-<view>文章详情页</view>
+<view class="data-v-0f860299"><detail-info vue-id="1" item="{{detail}}" class="data-v-0f860299" bind:__l="__l"></detail-info><view class="u-comment-title data-v-0f860299">最新评论</view><comment-list vue-id="2" comment="{{comment}}" class="data-v-0f860299" bind:__l="__l"></comment-list></view>

@@ -84,9 +84,7 @@ export default {
 		console.log(e);
 		switch (e.index) {
 			case 0: //左边
-				uni.navigateTo({
-					url:"../userList/userList"
-				})
+			    this.User.navigate({url:"../userList/userList"})
 				this.$refs.popup.close();
 				break;
 			case 1: //右边

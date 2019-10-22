@@ -131,7 +131,8 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var indexList = function indexList() {return __webpack_require__.e(/*! import() | components/index/indexList/index-list */ "components/index/indexList/index-list").then(__webpack_require__.bind(null, /*! ../../components/index/indexList/index-list.vue */ 168));};var swiperTab = function swiperTab() {return __webpack_require__.e(/*! import() | components/index/swiperTab/swiper-tab */ "components/index/swiperTab/swiper-tab").then(__webpack_require__.bind(null, /*! ../../components/index/swiperTab/swiper-tab.vue */ 175));};var loadMore = function loadMore() {return __webpack_require__.e(/*! import() | components/common/loadmore */ "components/common/loadmore").then(__webpack_require__.bind(null, /*! ../../components/common/loadmore.vue */ 182));};var noThing = function noThing() {return __webpack_require__.e(/*! import() | components/common/noThing */ "components/common/noThing").then(__webpack_require__.bind(null, /*! ../../components/common/noThing.vue */ 189));};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 272));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _slicedToArray(arr, i) {return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();}function _nonIterableRest() {throw new TypeError("Invalid attempt to destructure non-iterable instance");}function _iterableToArrayLimit(arr, i) {var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"] != null) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}function _arrayWithHoles(arr) {if (Array.isArray(arr)) return arr;}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var indexList = function indexList() {return __webpack_require__.e(/*! import() | components/index/indexList/index-list */ "components/index/indexList/index-list").then(__webpack_require__.bind(null, /*! ../../components/index/indexList/index-list.vue */ 168));};var swiperTab = function swiperTab() {return __webpack_require__.e(/*! import() | components/index/swiperTab/swiper-tab */ "components/index/swiperTab/swiper-tab").then(__webpack_require__.bind(null, /*! ../../components/index/swiperTab/swiper-tab.vue */ 175));};var loadMore = function loadMore() {return __webpack_require__.e(/*! import() | components/common/loadmore */ "components/common/loadmore").then(__webpack_require__.bind(null, /*! ../../components/common/loadmore.vue */ 182));};var noThing = function noThing() {return __webpack_require__.e(/*! import() | components/common/noThing */ "components/common/noThing").then(__webpack_require__.bind(null, /*! ../../components/common/noThing.vue */ 189));};var _default =
+
 
 
 
@@ -177,10 +178,12 @@ __webpack_require__.r(__webpack_exports__);
     return {
       swiperheight: '',
       tabIndex: 0,
-      tabBars: [],
-      newsList: [{
+      tabBars: [], //文章分类
+      newsList: [
+      {
         loadtext: '上拉加载更多',
-        list: [{
+        list: [
+        {
           userpic: '/static/demo/userpic/1.jpg',
           username: '昵称',
           isguanzhu: false,
@@ -233,7 +236,8 @@ __webpack_require__.r(__webpack_exports__);
 
       {
         loadtext: '上拉加载更多',
-        list: [{
+        list: [
+        {
           userpic: '/static/demo/userpic/1.jpg',
           username: '昵称',
           isguanzhu: false,
@@ -246,24 +250,9 @@ __webpack_require__.r(__webpack_exports__);
             cainum: 10 },
 
           commentnum: 2,
-          sharenum: 10 }] },
+          sharenum: 10 }] }] };
 
 
-      {
-        loadtext: '上拉加载更多',
-        list: [] },
-
-      {
-        loadtext: '上拉加载更多',
-        list: [] },
-
-      {
-        loadtext: '上拉加载更多',
-        list: [] },
-
-      {
-        loadtext: '上拉加载更多',
-        list: [] }] };
 
 
 
@@ -334,27 +323,39 @@ __webpack_require__.r(__webpack_exports__);
           break;}
 
     },
-    getpostclass: function getpostclass() {var _this2 = this;
-      var url = '';
+    getpostclass: function () {var _getpostclass = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var _ref, _ref2, err, res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
+
+                  this.$http.get('postclass'));case 2:_ref = _context.sent;_ref2 = _slicedToArray(_ref, 2);err = _ref2[0];res = _ref2[1];if (!
+                err) {_context.next = 8;break;}return _context.abrupt("return",
+                uni.showToast({
+                  title: '获取信息失败',
+                  icon: 'none' }));case 8:if (!
 
 
+                res.data.errorCode) {_context.next = 10;break;}return _context.abrupt("return",
+                uni.showToast({
+                  title: res.data.msg,
+                  icon: 'none' }));case 10:
 
 
-      url = "http://ceshi2.dishait.cn/api/v1/postclass";
+                this.tabBars = res.data.data.list;
+                // let arr=[];
+                //    for(let i=0;i<res.data.data.list.length;i++){
+                // 	arr.push({
+                // 		loadtext: '上拉加载更多',
+                // 		list:[],
+                // 		page:1,
+                // 		firstload:false
+                // 	})
+                // }
+                // this.newsList=arr
+                if (this.tabBars.length != 0) {
+                  this.getnewsList();
+                }case 12:case "end":return _context.stop();}}}, _callee, this);}));function getpostclass() {return _getpostclass.apply(this, arguments);}return getpostclass;}(),
 
-      console.log('网站', url);
-      uni.request({
-        url: url,
-        method: "GET",
-        success: function success(res) {
-          console.log(res);
-          _this2.tabBars = res.data.data.list;
-        },
-        fail: function fail(err) {
-          console.log(err);
-        } });
-
-    } } };exports.default = _default;
+    getnewsList: function () {var _getnewsList = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var _ref3, _ref4, err, res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
+                  this.$http.get("topicclass/".concat(this.tabBars[this.tabIndex].id, "/topic/1")));case 2:_ref3 = _context2.sent;_ref4 = _slicedToArray(_ref3, 2);err = _ref4[0];res = _ref4[1];
+                console.log('指定话题底下分类', res);case 7:case "end":return _context2.stop();}}}, _callee2, this);}));function getnewsList() {return _getnewsList.apply(this, arguments);}return getnewsList;}() } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),

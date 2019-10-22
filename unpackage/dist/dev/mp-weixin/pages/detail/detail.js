@@ -58,7 +58,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _time = _interopRequireDefault(__webpack_require__(/*! @/common/time.js */ 103));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var detailInfo = function detailInfo() {return __webpack_require__.e(/*! import() | components/detail/detailInfo */ "components/detail/detailInfo").then(__webpack_require__.bind(null, /*! @/components/detail/detailInfo.vue */ 296));};var commentList = function commentList() {return __webpack_require__.e(/*! import() | components/detail/commentList */ "components/detail/commentList").then(__webpack_require__.bind(null, /*! @/components/detail/commentList.vue */ 403));};
+
+
+var _time = _interopRequireDefault(__webpack_require__(/*! @/common/time.js */ 103));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var detailInfo = function detailInfo() {return __webpack_require__.e(/*! import() | components/detail/detailInfo */ "components/detail/detailInfo").then(__webpack_require__.bind(null, /*! @/components/detail/detailInfo.vue */ 296));};var commentList = function commentList() {return __webpack_require__.e(/*! import() | components/detail/commentList */ "components/detail/commentList").then(__webpack_require__.bind(null, /*! @/components/detail/commentList.vue */ 303));};var moreShare = function moreShare() {return Promise.all(/*! import() | components/common/moreShare */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/common/moreShare")]).then(__webpack_require__.bind(null, /*! @/components/common/moreShare.vue */ 310));};
+
 var demoList = [
 {
   //一级评论
@@ -100,10 +103,12 @@ var demoList = [
 {
   components: {
     detailInfo: detailInfo,
-    commentList: commentList },
+    commentList: commentList,
+    moreShare: moreShare },
 
   data: function data() {
     return {
+      showshare: false,
       comment: {
         count: 20,
         list: [] },
@@ -138,6 +143,7 @@ var demoList = [
     switch (e.index) {
       case 0:
         console.log('分享');
+        this.showshare = !this.showshare;
         break;}
 
   },
@@ -154,6 +160,13 @@ var demoList = [
       uni.setNavigationBarTitle({
         title: obj.title });
 
+    },
+    togle: function togle() {
+      this.showshare = !this.showshare;
+    },
+    femx: function femx() {
+      console.log('点击了');
+      this.showshare = true;
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

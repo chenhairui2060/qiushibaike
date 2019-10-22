@@ -141,6 +141,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
 //模拟当前登录用户的userId
 var uid = 1;var _default =
 {
@@ -166,9 +169,10 @@ var uid = 1;var _default =
         username: '曲调',
         data: '你好啊',
         type: 'text',
-        createTime: 1571215910 }] };
+        createTime: 1571215910 }],
 
 
+      scrollInto: '' };
 
   },
   onLoad: function onLoad() {var _this = this;
@@ -196,6 +200,15 @@ var uid = 1;var _default =
 
       }
       this.list.push(obj);
+      //清空输入框
+      this.content = "";
+      this.pageToBottom();
+    },
+    //滚动到底部
+    pageToBottom: function pageToBottom() {
+      var lastIndex = this.list.length - 1;
+      if (lastIndex < 0) return;
+      this.scrollInto = 'chat' + lastIndex;
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

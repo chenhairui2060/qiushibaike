@@ -122,7 +122,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var uniStatusBar = function uniStatusBar() {return __webpack_require__.e(/*! import() | components/uni-status-bar/uni-status-bar */ "components/uni-status-bar/uni-status-bar").then(__webpack_require__.bind(null, /*! @/components/uni-status-bar/uni-status-bar.vue */ 327));};var otherLogin = function otherLogin() {return __webpack_require__.e(/*! import() | components/home/otherLogin */ "components/home/otherLogin").then(__webpack_require__.bind(null, /*! @/components/home/otherLogin.vue */ 253));};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var uniStatusBar = function uniStatusBar() {return __webpack_require__.e(/*! import() | components/uni-status-bar/uni-status-bar */ "components/uni-status-bar/uni-status-bar").then(__webpack_require__.bind(null, /*! @/components/uni-status-bar/uni-status-bar.vue */ 341));};var otherLogin = function otherLogin() {return __webpack_require__.e(/*! import() | components/home/otherLogin */ "components/home/otherLogin").then(__webpack_require__.bind(null, /*! @/components/home/otherLogin.vue */ 253));};var _default =
 
 
 
@@ -253,6 +253,9 @@ __webpack_require__.r(__webpack_exports__);
     //返回上一步
     back: function back() {
       console.log('返回上一步');
+      uni.navigateBack({
+        delta: 1 });
+
     },
     //提交登录
     submit: function submit() {

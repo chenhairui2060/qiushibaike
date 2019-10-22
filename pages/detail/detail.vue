@@ -3,13 +3,16 @@
 		<detail-info :item="detail"></detail-info>
 		<view class="u-comment-title">最新评论</view>
 		<comment-list :comment="comment"></comment-list>
+		<!-- 分享样式 -->
+		<more-share :show="showshare" @togle="togle"></more-share>
 	</view>
 </template>
 
 <script>
 import detailInfo from '@/components/detail/detailInfo.vue';
-import commentList from "@/components/detail/commentList.vue";
+import commentList from '@/components/detail/commentList.vue';
 import time from '@/common/time.js';
+import moreShare from '@/components/common/moreShare.vue';
 let demoList = [
 	{
 		//一级评论
@@ -51,10 +54,12 @@ let demoList = [
 export default {
 	components: {
 		detailInfo,
-		commentList
+		commentList,
+		moreShare
 	},
 	data() {
 		return {
+			showshare:false,
 			comment: {
 				count: 20,
 				list: []
@@ -89,6 +94,7 @@ export default {
 		switch (e.index) {
 			case 0:
 				console.log('分享');
+				this.showshare=!this.showshare;
 				break;
 		}
 	},
@@ -105,15 +111,24 @@ export default {
 			uni.setNavigationBarTitle({
 				title: obj.title
 			});
+		},
+		togle(){
+			this.showshare=!this.showshare;
+		},
+		femx(){
+			console.log('点击了')
+			this.showshare=true
 		}
 	}
 };
 </script>
 
 <style scoped>
+	
 .u-comment-title {
 	padding: 20upx;
 	font-size: 30upx;
 	font-weight: bold;
 }
+
 </style>

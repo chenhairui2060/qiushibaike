@@ -35,5 +35,8 @@
 	}
 </script>
 
-<style>
+<style scoped>
+	.align-start{
+		margin-bottom: 10upx;
+	}
 </style>

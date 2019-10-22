@@ -129,6 +129,9 @@ export default {
 		//返回上一步
 		back() {
 			console.log('返回上一步');
+			uni.navigateBack({
+				delta:1
+			})
 		},
 		//提交登录
 		submit() {

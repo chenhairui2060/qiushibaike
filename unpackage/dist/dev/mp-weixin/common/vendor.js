@@ -8488,7 +8488,7 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 308:
+/***/ 322:
 /*!*************************************************************************!*\
   !*** E:/uniapp/仿糗事百科/components/mpvue-citypicker/city-data/province.js ***!
   \*************************************************************************/
@@ -8638,7 +8638,7 @@ provinceData;exports.default = _default;
 
 /***/ }),
 
-/***/ 309:
+/***/ 323:
 /*!*********************************************************************!*\
   !*** E:/uniapp/仿糗事百科/components/mpvue-citypicker/city-data/city.js ***!
   \*********************************************************************/
@@ -10152,7 +10152,7 @@ cityData;exports.default = _default;
 
 /***/ }),
 
-/***/ 310:
+/***/ 324:
 /*!*********************************************************************!*\
   !*** E:/uniapp/仿糗事百科/components/mpvue-citypicker/city-data/area.js ***!
   \*********************************************************************/
@@ -22717,6 +22717,145 @@ areaData;exports.default = _default;
 
 /***/ }),
 
+/***/ 422:
+/*!****************************************!*\
+  !*** E:/uniapp/仿糗事百科/common/config.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //配置信息
+var _default = {
+  //api请求前缀
+  webUrl: "http://ceshi2.dishait.cn/api/v1/" };exports.default = _default;
+
+/***/ }),
+
+/***/ 423:
+/*!**************************************!*\
+  !*** E:/uniapp/仿糗事百科/common/user.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  //用户的token
+  token: false,
+  //用户信息
+  userinfo: false,
+  //权限验证跳转
+  navigate: function navigate(options) {var type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "navigateTo";
+    //权限验证
+    if (!this.token) {
+      return uni.navigateTo({
+        url: "/pages/login/login" });
+
+    }
+    //跳转
+    switch (type) {
+      case "navigateTo":
+        uni.navigateTo(options);
+        break;
+      case "redirectTo":
+        uni.redirectTo(options);
+        break;
+      case "reLaunch":
+        uni.reLaunch(options);
+        break;
+      case "switchTab":
+        uni.switchTab(options);
+        break;}
+
+
+  } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+
+/***/ 424:
+/*!*****************************************!*\
+  !*** E:/uniapp/仿糗事百科/common/request.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _config = _interopRequireDefault(__webpack_require__(/*! ./config.js */ 422));
+var _user = _interopRequireDefault(__webpack_require__(/*! ./user.js */ 423));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default =
+{
+  config: {
+    baseUrl: _config.default.webUrl,
+    header: _defineProperty({
+      "Content-Type": "application/json;chareset=UTF-8" }, "Content-Type",
+    "application/x-www-form-urlencoded"),
+
+    data: {},
+    method: "GET",
+    dataType: "json" },
+
+  request: function request() {var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    options.header = options.header || this.config.header;
+    options.method = options.method || this.config.method;
+    options.dataType = options.dataType || this.config.dataType;
+
+
+
+
+    options.url = this.config.baseUrl + options.url;
+
+    //如果需要验证token
+    if (options.token) {
+      //如果需要验证checkToken 和用户没有登录!User.token
+      if (options.checkToken && !_user.default.token) {
+        uni.showToast({
+          title: "请先登录",
+          icon: "none" });
+
+        return uni.navigateTo({
+          url: "/pages/login/login" });
+
+      }
+      options.header.token = _user.default.token;
+    }
+    return uni.request(options);
+  },
+  get: function get(url, data) {var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+    options.url = url;
+    options.data = data;
+    options.method = "GET";
+    return this.request(options);
+  },
+  post: function post(url, data) {var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+    options.url = url;
+    options.data = data;
+    options.method = "POST";
+    return this.request(options);
+  } };
+
+
+// async getpostclass() {
+// 	let url = '';
+//
+
+
+//
+// 	url = this.config.webUrl + "postclass";
+//
+// 	let options = {
+// 		url: url,
+// 		method: "GET"
+// 	}
+// 	//返回的是Promise对象
+// 	let [err, res] = await uni.request(options);
+// 	console.log(res)
+// }
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+
 /***/ 5:
 /*!*******************************************************!*\
   !*** ./node_modules/@dcloudio/uni-stat/dist/index.js ***!
@@ -23623,7 +23762,7 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "usingComponents": { "index-list": "/components/index/indexList/index-list", "swiper-tab": "/components/index/swiperTab/swiper-tab", "load-more": "/components/common/loadmore", "no-thing": "/components/common/noThing" } }, "pages/news/news": { "usingComponents": { "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar", "common-list": "/components/common/commonList", "news-nav-bar": "/components/news/newsNavBar", "no-thing": "/components/common/noThing", "hot-cate": "/components/news/hotCate", "topic-list": "/components/news/topicList" } }, "pages/paper/paper": { "navigationBarTitleText": "消息列表", "enablePullDownRefresh": true, "usingComponents": { "msg-list": "/components/msg/msgList", "no-thing": "/components/common/noThing", "uni-popup": "/components/uni-popup/uni-popup" } }, "pages/home/home": { "navigationBarTitleText": "我的", "usingComponents": { "home-list-item": "/components/home/homeListItem", "home-info": "/components/home/homeInfo", "home-data": "/components/home/homeData", "other-login": "/components/home/otherLogin" } }, "pages/demo/demo": { "navigationBarTitleText": "demo", "usingComponents": {} }, "pages/search/search": { "usingComponents": {} }, "pages/addInput/addInput": { "usingComponents": { "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar", "up-load-imgs": "/components/common/uploadImgs", "uni-popup": "/components/uni-popup/uni-popup" } }, "pages/topicNav/topicNav": { "navigationBarTitleText": "热门分类", "usingComponents": { "topic-list": "/components/news/topicList", "swiper-tab": "/components/index/swiperTab/swiper-tab", "load-more": "/components/common/loadmore", "no-thing": "/components/common/noThing" } }, "pages/topicDetail/topicDetail": { "usingComponents": { "topic-info": "/components/topicDetail/topicInfo", "common-list": "/components/common/commonList", "load-more": "/components/common/loadmore" } }, "pages/userList/userList": { "usingComponents": { "load-more": "/components/common/loadmore", "no-thing": "/components/common/noThing", "uni-badge": "/components/uni-badge/uni-badge" } }, "pages/userChat/userChat": { "usingComponents": { "user-chat-list": "/components/userChat/userChatList" } }, "pages/detail/detail": { "navigationBarTitleText": "内容详情页", "usingComponents": { "detail-info": "/components/detail/detailInfo", "comment-list": "/components/detail/commentList" } }, "pages/userSet/userSet": { "navigationBarTitleText": "设置", "usingComponents": { "home-list-item": "/components/home/homeListItem" } }, "pages/userSetRepassword/userSetRepassword": { "navigationBarTitleText": "修改密码", "usingComponents": {} }, "pages/userSetEmail/userSetEmail": { "navigationBarTitleText": "修改邮箱", "usingComponents": {} }, "pages/userSetUserinfo/userSetUserinfo": { "navigationBarTitleText": "编辑资料", "usingComponents": { "mpvue-city-picker": "/components/mpvue-citypicker/mpvueCityPicker" } }, "pages/userSetHelp/userSetHelp": { "navigationBarTitleText": "意见反馈", "usingComponents": { "uni-collapse": "/components/uni-collapse/uni-collapse", "uni-collapse-item": "/components/uni-collapse-item/uni-collapse-item" } }, "pages/userSetAbout/userSetAbout": { "navigationBarTitleText": "关于糗百", "usingComponents": { "home-list-item": "/components/home/homeListItem" } }, "pages/login/login": { "usingComponents": { "uni-status-bar": "/components/uni-status-bar/uni-status-bar", "other-login": "/components/home/otherLogin" } }, "pages/userSpace/userSpace": { "navigationBarTitleText": "个人空间", "usingComponents": { "user-space-head": "/components/userSpace/userSpaceHead", "home-data": "/components/home/homeData", "swiper-tab": "/components/index/swiperTab/swiper-tab", "user-space-info": "/components/userSpace/userSpaceInfo" } } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "仿糗事百科", "navigationBarBackgroundColor": "#FFFFFF", "backgroundColor": "#FFFFFF" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "usingComponents": { "index-list": "/components/index/indexList/index-list", "swiper-tab": "/components/index/swiperTab/swiper-tab", "load-more": "/components/common/loadmore", "no-thing": "/components/common/noThing" } }, "pages/news/news": { "usingComponents": { "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar", "common-list": "/components/common/commonList", "news-nav-bar": "/components/news/newsNavBar", "no-thing": "/components/common/noThing", "hot-cate": "/components/news/hotCate", "topic-list": "/components/news/topicList" } }, "pages/paper/paper": { "navigationBarTitleText": "消息列表", "enablePullDownRefresh": true, "usingComponents": { "msg-list": "/components/msg/msgList", "no-thing": "/components/common/noThing", "uni-popup": "/components/uni-popup/uni-popup" } }, "pages/home/home": { "navigationBarTitleText": "我的", "usingComponents": { "home-list-item": "/components/home/homeListItem", "home-info": "/components/home/homeInfo", "home-data": "/components/home/homeData", "other-login": "/components/home/otherLogin" } }, "pages/demo/demo": { "navigationBarTitleText": "demo", "usingComponents": {} }, "pages/search/search": { "usingComponents": {} }, "pages/addInput/addInput": { "usingComponents": { "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar", "up-load-imgs": "/components/common/uploadImgs", "uni-popup": "/components/uni-popup/uni-popup" } }, "pages/topicNav/topicNav": { "navigationBarTitleText": "热门分类", "usingComponents": { "topic-list": "/components/news/topicList", "swiper-tab": "/components/index/swiperTab/swiper-tab", "load-more": "/components/common/loadmore", "no-thing": "/components/common/noThing" } }, "pages/topicDetail/topicDetail": { "usingComponents": { "topic-info": "/components/topicDetail/topicInfo", "common-list": "/components/common/commonList", "load-more": "/components/common/loadmore" } }, "pages/userList/userList": { "usingComponents": { "load-more": "/components/common/loadmore", "no-thing": "/components/common/noThing", "uni-badge": "/components/uni-badge/uni-badge" } }, "pages/userChat/userChat": { "usingComponents": { "user-chat-list": "/components/userChat/userChatList" } }, "pages/detail/detail": { "navigationBarTitleText": "内容详情页", "usingComponents": { "detail-info": "/components/detail/detailInfo", "comment-list": "/components/detail/commentList", "more-share": "/components/common/moreShare" } }, "pages/userSet/userSet": { "navigationBarTitleText": "设置", "usingComponents": { "home-list-item": "/components/home/homeListItem" } }, "pages/userSetRepassword/userSetRepassword": { "navigationBarTitleText": "修改密码", "usingComponents": {} }, "pages/userSetEmail/userSetEmail": { "navigationBarTitleText": "修改邮箱", "usingComponents": {} }, "pages/userSetUserinfo/userSetUserinfo": { "navigationBarTitleText": "编辑资料", "usingComponents": { "mpvue-city-picker": "/components/mpvue-citypicker/mpvueCityPicker" } }, "pages/userSetHelp/userSetHelp": { "navigationBarTitleText": "意见反馈", "usingComponents": { "uni-collapse": "/components/uni-collapse/uni-collapse", "uni-collapse-item": "/components/uni-collapse-item/uni-collapse-item" } }, "pages/userSetAbout/userSetAbout": { "navigationBarTitleText": "关于糗百", "usingComponents": { "home-list-item": "/components/home/homeListItem" } }, "pages/login/login": { "usingComponents": { "uni-status-bar": "/components/uni-status-bar/uni-status-bar", "other-login": "/components/home/otherLogin" } }, "pages/userSpace/userSpace": { "navigationBarTitleText": "个人空间", "usingComponents": { "user-space-head": "/components/userSpace/userSpaceHead", "home-data": "/components/home/homeData", "swiper-tab": "/components/index/swiperTab/swiper-tab", "user-space-info": "/components/userSpace/userSpaceInfo" } } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "仿糗事百科", "navigationBarBackgroundColor": "#FFFFFF", "backgroundColor": "#FFFFFF" } };exports.default = _default;
 
 /***/ }),
 

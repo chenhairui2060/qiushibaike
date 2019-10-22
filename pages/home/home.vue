@@ -46,7 +46,7 @@
 		},
 		data() {
 			return {
-				isLogin: true,
+				isLogin: false,
 				list: [{
 						icon: 'liulan',
 						name: '浏览历史',
@@ -99,12 +99,10 @@
 			},200)
 		},
 		onNavigationBarButtonTap(e) {
+			console.log('点击了这个方法')
 			switch (e.index) {
 				case 0:
-					// console.log('设置页');
-					uni.navigateTo({
-						url: "../userSet/userSet"
-					})
+					this.User.navigate({url: "../userSet/userSet"})
 					break;
 			}
 		},

@@ -29,6 +29,7 @@
 	.filter{
 		filter: blur(10upx);
 	}
+	
 	.page{
 		height: 100%;
 		width: 100%;

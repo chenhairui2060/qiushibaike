@@ -5,8 +5,6 @@
 				<view class="icon iconfont icon-weixin" :class="'icon-'+item.icon"></view>
 			</view>
 		</block>
-		<!-- <view class="u-f-ajc flex-1"><view class="icon iconfont icon-xinlangweibo"></view></view>
-		<view class="u-f-ajc flex-1"><view class="icon iconfont icon-QQ"></view></view> -->
 	</view>
 </template>
 
@@ -29,6 +27,12 @@
 					provider: provider.id,
 					success: (res) => {
 						console.log('登录结果',res)
+						uni.getUserInfo({
+							provider:provider.id,
+							success: (infoRes) => {
+								console.log('返回信息',infoRes)
+							}
+						})
 					}
 				})
 			}

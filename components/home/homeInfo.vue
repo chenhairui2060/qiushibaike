@@ -6,7 +6,7 @@
 				{{homeInfo.username}}
 			</view>
 			<view>
-				总访客 {{homeInfo.totalnum}} 今日 {{homeInfo.todaynum}}
+				总文章 {{homeInfo.totalnum}} 今日 {{homeInfo.todaynum}}
 			</view>
 		</view>
 		<view class="icon iconfont icon-jinru">
@@ -19,6 +19,11 @@
 	export default{
 		props:{
 			homeInfo:Object
+		},
+		data() {
+			return {
+			  
+			};
 		},
 		methods:{
 			ToUserSpace(){
